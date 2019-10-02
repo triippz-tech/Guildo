@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity AutoModeration.
+    -->
+    <changeSet id="20191002004533-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="ignore_config_id"
+                                 baseTableName="auto_moderation"
+                                 constraintName="fk_auto_moderation_ignore_config_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auto_mod_ignore"/>
+
+        <addForeignKeyConstraint baseColumnNames="mention_config_id"
+                                 baseTableName="auto_moderation"
+                                 constraintName="fk_auto_moderation_mention_config_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auto_mod_mentions"/>
+
+        <addForeignKeyConstraint baseColumnNames="anti_dup_config_id"
+                                 baseTableName="auto_moderation"
+                                 constraintName="fk_auto_moderation_anti_dup_config_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auto_mod_anti_dup"/>
+
+        <addForeignKeyConstraint baseColumnNames="auto_raid_config_id"
+                                 baseTableName="auto_moderation"
+                                 constraintName="fk_auto_moderation_auto_raid_config_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="auto_mod_auto_raid"/>
+
+    </changeSet>
+</databaseChangeLog>

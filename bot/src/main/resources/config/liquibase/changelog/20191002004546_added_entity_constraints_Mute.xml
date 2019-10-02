@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Mute.
+    -->
+    <changeSet id="20191002004546-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="muted_user_id"
+                                 baseTableName="mute"
+                                 constraintName="fk_mute_muted_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="discord_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="muted_guild_server_id"
+                                 baseTableName="mute"
+                                 constraintName="fk_mute_muted_guild_server_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_server"/>
+
+    </changeSet>
+</databaseChangeLog>

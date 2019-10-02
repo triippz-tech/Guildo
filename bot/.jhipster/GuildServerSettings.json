@@ -1,0 +1,81 @@
+{
+    "name": "GuildServerSettings",
+    "fields": [
+        {
+            "fieldName": "prefix",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 40
+        },
+        {
+            "fieldName": "timezone",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": 32
+        },
+        {
+            "fieldName": "raidModeEnabled",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "raidModeReason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "maxStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "acceptingApplications",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "autoModeration",
+            "otherEntityRelationshipName": "guildServerSettings",
+            "relationshipName": "autoModConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "punishment",
+            "otherEntityRelationshipName": "guildServerSettings",
+            "relationshipName": "punishmentConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191002004544",
+    "javadoc": "Represents the Guildo settings of a particular Guild\\n@author Mark Tripoli",
+    "entityTableName": "guild_server_settings",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

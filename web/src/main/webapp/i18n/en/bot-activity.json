@@ -1,0 +1,13 @@
+{
+  "webApp": {
+    "Activity": {
+      "null": "",
+      "SERVER_JOIN": "SERVER_JOIN",
+      "SERVER_QUIT": "SERVER_QUIT",
+      "CHANNEL_JOIN": "CHANNEL_JOIN",
+      "CHANNEL_LEAVE": "CHANNEL_LEAVE",
+      "NAME_CHANGE": "NAME_CHANGE",
+      "AVATAR_CHANGE": "AVATAR_CHANGE"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "webApp": {
+    "botAutoModeration": {
+      "home": {
+        "title": "Auto Moderations",
+        "createLabel": "Create a new Auto Moderation",
+        "createOrEditLabel": "Create or edit a Auto Moderation",
+        "notFound": "No Auto Moderations found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Auto Moderation {{ id }}?"
+      },
+      "detail": {
+        "title": "Auto Moderation"
+      },
+      "inviteStrikes": "Invite Strikes",
+      "copyPastaStrikes": "Copy Pasta Strikes",
+      "everyoneMentionStrikes": "Everyone Mention Strikes",
+      "referralStrikes": "Referral Strikes",
+      "duplicateStrikes": "Duplicate Strikes",
+      "resolveUrls": "Resolve Urls",
+      "enabled": "Enabled",
+      "ignoreConfig": "Ignore Config",
+      "mentionConfig": "Mention Config",
+      "antiDupConfig": "Anti Dup Config",
+      "autoRaidConfig": "Auto Raid Config"
+    }
+  },
+  "botApp": {
+    "botAutoModeration": {
+      "created": "A new Auto Moderation is created with identifier {{ param }}",
+      "updated": "A Auto Moderation is updated with identifier {{ param }}",
+      "deleted": "A Auto Moderation is deleted with identifier {{ param }}"
+    }
+  }
+}

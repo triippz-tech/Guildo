@@ -1,0 +1,35 @@
+{
+    "name": "GuildApplicationForm",
+    "fields": [
+        {
+            "fieldName": "applicationForm",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004538",
+    "javadoc": "Represents the Application Form (doc,txt, etc.) which a Discord User\\nmay need to fillout and submit within their application\\n@author Mark Tripoli",
+    "entityTableName": "guild_application_form",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

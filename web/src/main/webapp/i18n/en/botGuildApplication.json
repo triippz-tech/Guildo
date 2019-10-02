@@ -1,0 +1,32 @@
+{
+  "webApp": {
+    "botGuildApplication": {
+      "home": {
+        "title": "Guild Applications",
+        "createLabel": "Create a new Guild Application",
+        "createOrEditLabel": "Create or edit a Guild Application",
+        "notFound": "No Guild Applications found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Application {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Application"
+      },
+      "characterName": "Character Name",
+      "characterType": "Character Type",
+      "applicationFile": "Application File",
+      "status": "Status",
+      "acceptedBy": "Accepted By",
+      "appliedUser": "Applied User",
+      "guildServer": "Guild Server"
+    }
+  },
+  "botApp": {
+    "botGuildApplication": {
+      "created": "A new Guild Application is created with identifier {{ param }}",
+      "updated": "A Guild Application is updated with identifier {{ param }}",
+      "deleted": "A Guild Application is deleted with identifier {{ param }}"
+    }
+  }
+}

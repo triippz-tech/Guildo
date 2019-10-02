@@ -1,0 +1,27 @@
+{
+  "webApp": {
+    "botAutoModAntiDup": {
+      "home": {
+        "title": "Auto Mod Anti Dups",
+        "createLabel": "Create a new Auto Mod Anti Dup",
+        "createOrEditLabel": "Create or edit a Auto Mod Anti Dup",
+        "notFound": "No Auto Mod Anti Dups found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Auto Mod Anti Dup {{ id }}?"
+      },
+      "detail": {
+        "title": "Auto Mod Anti Dup"
+      },
+      "deleteThreshold": "Delete Threshold",
+      "dupsToPunish": "Dups To Punish"
+    }
+  },
+  "botApp": {
+    "botAutoModAntiDup": {
+      "created": "A new Auto Mod Anti Dup is created with identifier {{ param }}",
+      "updated": "A Auto Mod Anti Dup is updated with identifier {{ param }}",
+      "deleted": "A Auto Mod Anti Dup is deleted with identifier {{ param }}"
+    }
+  }
+}

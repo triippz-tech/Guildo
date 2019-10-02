@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    
+    <!--
+        Added the entity AutoModAutoRaid.
+    -->
+    <changeSet id="20191002004530-1" author="jhipster">
+        <createTable tableName="auto_mod_auto_raid" remarks="Represents The AutoRaid configuration. This\nis used to determine if autoraid is enabled\nand the threshhold to look back in time to see\nhow many users have joined the server recently\n@author Mark Tripoli">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="auto_raid_enabled" type="boolean">
+                <constraints nullable="false" />
+            </column>
+            <column name="auto_raid_time_threshold" type="integer">
+                <constraints nullable="false" />
+            </column>
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+    </changeSet>
+
+    <changeSet id="20191002004530-1-relations" author="jhipster">
+
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+
+    <!--
+        Load sample data generated with Faker.js
+        - This data can be easily edited using a CSV editor (or even MS Excel) and
+          is located in the 'src/main/resources/config/liquibase/data' directory
+        - By default this data is applied when running with the JHipster 'dev' profile.
+          This can be customized by adding or removing 'faker' in the 'spring.liquibase.contexts'
+          Spring Boot configuration key.
+    -->
+    <changeSet id="20191002004530-1-data" author="jhipster" context="faker">
+        <loadData
+                  file="config/liquibase/fake-data/auto_mod_auto_raid.csv"
+                  separator=";"
+                  tableName="auto_mod_auto_raid">
+            <column name="id" type="numeric"/>
+            <column name="auto_raid_enabled" type="boolean"/>
+            <column name="auto_raid_time_threshold" type="numeric"/>
+            <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
+        </loadData>
+    </changeSet>
+
+</databaseChangeLog>

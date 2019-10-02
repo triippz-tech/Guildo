@@ -1,0 +1,33 @@
+{
+  "webApp": {
+    "botGuildServerSettings": {
+      "home": {
+        "title": "Guild Server Settings",
+        "createLabel": "Create a new Guild Server Settings",
+        "createOrEditLabel": "Create or edit a Guild Server Settings",
+        "notFound": "No Guild Server Settings found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Server Settings {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Server Settings"
+      },
+      "prefix": "Prefix",
+      "timezone": "Timezone",
+      "raidModeEnabled": "Raid Mode Enabled",
+      "raidModeReason": "Raid Mode Reason",
+      "maxStrikes": "Max Strikes",
+      "acceptingApplications": "Accepting Applications",
+      "autoModConfig": "Auto Mod Config",
+      "punishmentConfig": "Punishment Config"
+    }
+  },
+  "botApp": {
+    "botGuildServerSettings": {
+      "created": "A new Guild Server Settings is created with identifier {{ param }}",
+      "updated": "A Guild Server Settings is updated with identifier {{ param }}",
+      "deleted": "A Guild Server Settings is deleted with identifier {{ param }}"
+    }
+  }
+}

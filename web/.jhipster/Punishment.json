@@ -1,0 +1,43 @@
+{
+    "name": "Punishment",
+    "fields": [
+        {
+            "fieldName": "maxStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "action",
+            "fieldType": "PunishmentType",
+            "fieldValues": "NONE,KICK,BAN,TEMP_BAN,MUTE,TEMP_MUTE,UN_BAN",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "punishmentDuration",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004547",
+    "javadoc": "Represents the a punishment a moderator\\nmay hand to a Discord User in their server\\n@author Mark Tripoli",
+    "entityTableName": "punishment",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

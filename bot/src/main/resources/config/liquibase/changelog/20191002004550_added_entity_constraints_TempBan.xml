@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity TempBan.
+    -->
+    <changeSet id="20191002004550-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="banned_user_id"
+                                 baseTableName="temp_ban"
+                                 constraintName="fk_temp_ban_banned_user_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="discord_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="temp_ban_guild_server_id"
+                                 baseTableName="temp_ban"
+                                 constraintName="fk_temp_ban_temp_ban_guild_server_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_server"/>
+
+    </changeSet>
+</databaseChangeLog>

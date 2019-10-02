@@ -1,0 +1,10 @@
+{
+  "webApp": {
+    "ApplicationStatus": {
+      "null": "",
+      "ACCEPTED": "ACCEPTED",
+      "PENDING": "PENDING",
+      "NEW": "NEW"
+    }
+  }
+}

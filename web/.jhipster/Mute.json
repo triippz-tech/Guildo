@@ -1,0 +1,57 @@
+{
+    "name": "Mute",
+    "fields": [
+        {
+            "fieldName": "reason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "discordUser",
+            "otherEntityRelationshipName": "userMutes",
+            "relationshipName": "mutedUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "guildServer",
+            "otherEntityRelationshipName": "mutedUsers",
+            "relationshipName": "mutedGuildServer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191002004546",
+    "javadoc": "Represents a temprary muting of a Discord user within a guild\\n@author Mark Tripoli",
+    "entityTableName": "mute",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

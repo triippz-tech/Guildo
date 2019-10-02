@@ -1,0 +1,27 @@
+{
+  "webApp": {
+    "botGuildPollItem": {
+      "home": {
+        "title": "Guild Poll Items",
+        "createLabel": "Create a new Guild Poll Item",
+        "createOrEditLabel": "Create or edit a Guild Poll Item",
+        "notFound": "No Guild Poll Items found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Poll Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Poll Item"
+      },
+      "itemName": "Item Name",
+      "votes": "Votes"
+    }
+  },
+  "botApp": {
+    "botGuildPollItem": {
+      "created": "A new Guild Poll Item is created with identifier {{ param }}",
+      "updated": "A Guild Poll Item is updated with identifier {{ param }}",
+      "deleted": "A Guild Poll Item is deleted with identifier {{ param }}"
+    }
+  }
+}

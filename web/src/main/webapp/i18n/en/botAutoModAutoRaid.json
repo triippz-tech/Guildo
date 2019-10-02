@@ -1,0 +1,27 @@
+{
+  "webApp": {
+    "botAutoModAutoRaid": {
+      "home": {
+        "title": "Auto Mod Auto Raids",
+        "createLabel": "Create a new Auto Mod Auto Raid",
+        "createOrEditLabel": "Create or edit a Auto Mod Auto Raid",
+        "notFound": "No Auto Mod Auto Raids found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Auto Mod Auto Raid {{ id }}?"
+      },
+      "detail": {
+        "title": "Auto Mod Auto Raid"
+      },
+      "autoRaidEnabled": "Auto Raid Enabled",
+      "autoRaidTimeThreshold": "Auto Raid Time Threshold"
+    }
+  },
+  "botApp": {
+    "botAutoModAutoRaid": {
+      "created": "A new Auto Mod Auto Raid is created with identifier {{ param }}",
+      "updated": "A Auto Mod Auto Raid is updated with identifier {{ param }}",
+      "deleted": "A Auto Mod Auto Raid is deleted with identifier {{ param }}"
+    }
+  }
+}

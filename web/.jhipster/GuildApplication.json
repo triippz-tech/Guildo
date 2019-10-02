@@ -1,0 +1,70 @@
+{
+    "name": "GuildApplication",
+    "fields": [
+        {
+            "fieldName": "characterName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "characterType",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "applicationFile",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "ApplicationStatus",
+            "fieldValues": "ACCEPTED,PENDING,NEW",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "discordUser",
+            "otherEntityRelationshipName": "guildApplication",
+            "relationshipName": "acceptedBy",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "discordUser",
+            "otherEntityRelationshipName": "userApplications",
+            "relationshipName": "appliedUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "guildServer",
+            "otherEntityRelationshipName": "guildApplications",
+            "relationshipName": "guildServer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191002004537",
+    "javadoc": "Represents an application to a specific guild from a discord user\\n@author Mark Tripoli",
+    "entityTableName": "guild_application",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

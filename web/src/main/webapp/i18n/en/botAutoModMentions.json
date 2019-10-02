@@ -1,0 +1,28 @@
+{
+  "webApp": {
+    "botAutoModMentions": {
+      "home": {
+        "title": "Auto Mod Mentions",
+        "createLabel": "Create a new Auto Mod Mentions",
+        "createOrEditLabel": "Create or edit a Auto Mod Mentions",
+        "notFound": "No Auto Mod Mentions found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Auto Mod Mentions {{ id }}?"
+      },
+      "detail": {
+        "title": "Auto Mod Mentions"
+      },
+      "maxMentions": "Max Mentions",
+      "maxMsgLines": "Max Msg Lines",
+      "maxRoleMentions": "Max Role Mentions"
+    }
+  },
+  "botApp": {
+    "botAutoModMentions": {
+      "created": "A new Auto Mod Mentions is created with identifier {{ param }}",
+      "updated": "A Auto Mod Mentions is updated with identifier {{ param }}",
+      "deleted": "A Auto Mod Mentions is deleted with identifier {{ param }}"
+    }
+  }
+}

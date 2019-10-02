@@ -1,0 +1,21 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "docker-compose",
+    "gatewayType": "zuul",
+    "monitoring": "elk",
+    "directoryPath": "../",
+    "appsFolders": [
+      "web",
+      "bot",
+      "blog"
+    ],
+    "clusteredDbApps": [],
+    "consoleOptions": [
+      "zipkin"
+    ],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "guildo",
+    "dockerPushCommand": "docker push",
+    "jwtSecretKey": "ZjUzYTgwOGQ5YmI2YjcxMjljMDQ1ZWY3Y2YwNGMwY2FhNjVmMzkyMWQyYTFiMzg4ODU1Zjk0ZGQ4ZjM5ZmRlYjQwOTE3YTQ3Y2M1MGExYjA3Yzk1ZDYyZjZjMWIwNjAzZGMwMw=="
+  }
+}

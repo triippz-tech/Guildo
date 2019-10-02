@@ -1,0 +1,41 @@
+{
+    "name": "AutoModMentions",
+    "fields": [
+        {
+            "fieldName": "maxMentions",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "maxMsgLines",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "maxRoleMentions",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004532",
+    "javadoc": "Represents the max number of role mentions(@everyone),\\nmax number of lines allowed in a text message, and the max number\\nof mentions a discord user may write.\\n@author Mark Tripoli",
+    "entityTableName": "auto_mod_mentions",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

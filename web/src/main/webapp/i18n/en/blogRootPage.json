@@ -1,0 +1,28 @@
+{
+  "webApp": {
+    "blogRootPage": {
+      "home": {
+        "title": "Root Pages",
+        "createLabel": "Create a new Root Page",
+        "createOrEditLabel": "Create or edit a Root Page",
+        "notFound": "No Root Pages found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Root Page {{ id }}?"
+      },
+      "detail": {
+        "title": "Root Page"
+      },
+      "title": "Title",
+      "slug": "Slug",
+      "childPages": "Child Pages"
+    }
+  },
+  "blogApp": {
+    "blogRootPage": {
+      "created": "A new Root Page is created with identifier {{ param }}",
+      "updated": "A Root Page is updated with identifier {{ param }}",
+      "deleted": "A Root Page is deleted with identifier {{ param }}"
+    }
+  }
+}

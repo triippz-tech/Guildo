@@ -1,0 +1,34 @@
+{
+    "name": "GuildPollItem",
+    "fields": [
+        {
+            "fieldName": "itemName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "votes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004541",
+    "javadoc": "Represents an Item which will be placed\\ninto the Poll. Used to create a list of items.\\n@author Mark Tripoli",
+    "entityTableName": "guild_poll_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

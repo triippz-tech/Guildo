@@ -1,0 +1,63 @@
+{
+    "name": "TempBan",
+    "fields": [
+        {
+            "fieldName": "reason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "discordUser",
+            "otherEntityRelationshipName": "userTempBans",
+            "relationshipName": "bannedUser",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "guildServer",
+            "otherEntityRelationshipName": "guildTempBans",
+            "relationshipName": "tempBanGuildServer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191002004550",
+    "javadoc": "Represents a temporary ban of a Discord user from a guild\\n@author Mark Tripoli",
+    "entityTableName": "temp_ban",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "bot",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

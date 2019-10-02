@@ -1,0 +1,35 @@
+{
+  "webApp": {
+    "botGiveAway": {
+      "home": {
+        "title": "Give Aways",
+        "createLabel": "Create a new Give Away",
+        "createOrEditLabel": "Create or edit a Give Away",
+        "notFound": "No Give Aways found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Give Away {{ id }}?"
+      },
+      "detail": {
+        "title": "Give Away"
+      },
+      "name": "Name",
+      "image": "Image",
+      "message": "Message",
+      "messageId": "Message Id",
+      "textChannelId": "Text Channel Id",
+      "finish": "Finish",
+      "expired": "Expired",
+      "guildId": "Guild Id",
+      "winner": "Winner",
+      "guildGiveAway": "Guild Give Away"
+    }
+  },
+  "botApp": {
+    "botGiveAway": {
+      "created": "A new Give Away is created with identifier {{ param }}",
+      "updated": "A Give Away is updated with identifier {{ param }}",
+      "deleted": "A Give Away is deleted with identifier {{ param }}"
+    }
+  }
+}

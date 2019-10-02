@@ -1,0 +1,34 @@
+{
+    "name": "AutoModAntiDup",
+    "fields": [
+        {
+            "fieldName": "deleteThreshold",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "dupsToPunish",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004529",
+    "javadoc": "Represents the Anti Duplicates configuration\\n@author Mark Tripoli",
+    "entityTableName": "auto_mod_anti_dup",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

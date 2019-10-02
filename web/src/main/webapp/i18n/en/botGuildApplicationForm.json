@@ -1,0 +1,27 @@
+{
+  "webApp": {
+    "botGuildApplicationForm": {
+      "home": {
+        "title": "Guild Application Forms",
+        "createLabel": "Create a new Guild Application Form",
+        "createOrEditLabel": "Create or edit a Guild Application Form",
+        "notFound": "No Guild Application Forms found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Application Form {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Application Form"
+      },
+      "applicationForm": "Application Form",
+      "guildId": "Guild Id"
+    }
+  },
+  "botApp": {
+    "botGuildApplicationForm": {
+      "created": "A new Guild Application Form is created with identifier {{ param }}",
+      "updated": "A Guild Application Form is updated with identifier {{ param }}",
+      "deleted": "A Guild Application Form is deleted with identifier {{ param }}"
+    }
+  }
+}

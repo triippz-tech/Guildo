@@ -1,0 +1,35 @@
+{
+  "webApp": {
+    "botDiscordUser": {
+      "home": {
+        "title": "Discord Users",
+        "createLabel": "Create a new Discord User",
+        "createOrEditLabel": "Create or edit a Discord User",
+        "notFound": "No Discord Users found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Discord User {{ id }}?"
+      },
+      "detail": {
+        "title": "Discord User"
+      },
+      "userId": "User Id",
+      "userName": "User Name",
+      "icon": "Icon",
+      "commandsIssued": "Commands Issued",
+      "blacklisted": "Blacklisted",
+      "userLevel": "User Level",
+      "userProfile": "User Profile",
+      "userTempBans": "User Temp Bans",
+      "userMutes": "User Mutes",
+      "userApplications": "User Applications"
+    }
+  },
+  "botApp": {
+    "botDiscordUser": {
+      "created": "A new Discord User is created with identifier {{ param }}",
+      "updated": "A Discord User is updated with identifier {{ param }}",
+      "deleted": "A Discord User is deleted with identifier {{ param }}"
+    }
+  }
+}

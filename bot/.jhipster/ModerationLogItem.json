@@ -1,0 +1,93 @@
+{
+    "name": "ModerationLogItem",
+    "fields": [
+        {
+            "fieldName": "channelId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "channelName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "issuedById",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "issuedByName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "issuedToId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "issuedToName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "reason",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "moderationAction",
+            "fieldType": "PunishmentType",
+            "fieldValues": "NONE,KICK,BAN,TEMP_BAN,MUTE,TEMP_MUTE,UN_BAN"
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "guildServer",
+            "otherEntityRelationshipName": "modLogItems",
+            "relationshipName": "modItemGuildServer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191002004545",
+    "javadoc": "Represents a Log Entry of all Moderator\\nspecific actions on Users (kicks, bans, etc.)\\n@author Mark Tripoli",
+    "entityTableName": "moderation_log_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "bot",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

@@ -1,0 +1,36 @@
+{
+  "webApp": {
+    "botModerationLogItem": {
+      "home": {
+        "title": "Moderation Log Items",
+        "createLabel": "Create a new Moderation Log Item",
+        "createOrEditLabel": "Create or edit a Moderation Log Item",
+        "notFound": "No Moderation Log Items found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Moderation Log Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Moderation Log Item"
+      },
+      "channelId": "Channel Id",
+      "channelName": "Channel Name",
+      "issuedById": "Issued By Id",
+      "issuedByName": "Issued By Name",
+      "issuedToId": "Issued To Id",
+      "issuedToName": "Issued To Name",
+      "reason": "Reason",
+      "time": "Time",
+      "moderationAction": "Moderation Action",
+      "guildId": "Guild Id",
+      "modItemGuildServer": "Mod Item Guild Server"
+    }
+  },
+  "botApp": {
+    "botModerationLogItem": {
+      "created": "A new Moderation Log Item is created with identifier {{ param }}",
+      "updated": "A Moderation Log Item is updated with identifier {{ param }}",
+      "deleted": "A Moderation Log Item is deleted with identifier {{ param }}"
+    }
+  }
+}

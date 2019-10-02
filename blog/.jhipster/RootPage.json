@@ -1,0 +1,45 @@
+{
+    "name": "RootPage",
+    "fields": [
+        {
+            "fieldName": "title",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 10
+        },
+        {
+            "fieldName": "slug",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength",
+                "required"
+            ],
+            "fieldValidateRulesMaxlength": 50
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "page",
+            "otherEntityRelationshipName": "rootPage",
+            "relationshipName": "childPages",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191001235233",
+    "entityTableName": "root_page",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "blog"
+    ],
+    "microserviceName": "blog"
+}

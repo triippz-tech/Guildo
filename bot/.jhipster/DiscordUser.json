@@ -1,0 +1,88 @@
+{
+    "name": "DiscordUser",
+    "fields": [
+        {
+            "fieldName": "userId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "commandsIssued",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "blacklisted",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userLevel",
+            "fieldType": "DiscordUserLevel",
+            "fieldValues": "STANDARD,SUPPORTER,OWNER,DEVELOPER",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "discordUserProfile",
+            "otherEntityRelationshipName": "discordUser",
+            "relationshipName": "userProfile",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tempBan",
+            "otherEntityRelationshipName": "bannedUser",
+            "relationshipName": "userTempBans"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mute",
+            "otherEntityRelationshipName": "mutedUser",
+            "relationshipName": "userMutes"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "guildApplication",
+            "otherEntityRelationshipName": "appliedUser",
+            "relationshipName": "userApplications"
+        }
+    ],
+    "changelogDate": "20191002004534",
+    "javadoc": "Represents a physical Discord user used by Guildo.\\n@author Mark Tripoli",
+    "entityTableName": "discord_user",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "bot",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

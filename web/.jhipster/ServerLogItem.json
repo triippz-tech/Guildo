@@ -1,0 +1,78 @@
+{
+    "name": "ServerLogItem",
+    "fields": [
+        {
+            "fieldName": "activity",
+            "fieldType": "Activity",
+            "fieldValues": "SERVER_JOIN,SERVER_QUIT,CHANNEL_JOIN,CHANNEL_LEAVE,NAME_CHANGE,AVATAR_CHANGE",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "channelId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "channelName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "time",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "userName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "guildServer",
+            "otherEntityRelationshipName": "serverLogItems",
+            "relationshipName": "serverItemGuildServer",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191002004549",
+    "javadoc": "Represents a Log entry of all service specific events (name changes, avatar change, etc)\\n@author Mark Tripoli",
+    "entityTableName": "server_log_item",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

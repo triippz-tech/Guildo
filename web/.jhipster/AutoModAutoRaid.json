@@ -1,0 +1,34 @@
+{
+    "name": "AutoModAutoRaid",
+    "fields": [
+        {
+            "fieldName": "autoRaidEnabled",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "autoRaidTimeThreshold",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004530",
+    "javadoc": "Represents The AutoRaid configuration. This\\nis used to determine if autoraid is enabled\\nand the threshhold to look back in time to see\\nhow many users have joined the server recently\\n@author Mark Tripoli",
+    "entityTableName": "auto_mod_auto_raid",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

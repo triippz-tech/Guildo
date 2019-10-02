@@ -1,0 +1,141 @@
+{
+    "name": "GuildServer",
+    "fields": [
+        {
+            "fieldName": "guildId",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "guildName",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "icon",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "owner",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "serverLevel",
+            "fieldType": "GuildServerLevel",
+            "fieldValues": "STANDARD,PRO",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "guildServerProfile",
+            "otherEntityRelationshipName": "guildServer",
+            "relationshipName": "guildProfile",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "guildApplicationForm",
+            "otherEntityRelationshipName": "guildServer",
+            "relationshipName": "applicationForm",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "guildServerSettings",
+            "otherEntityRelationshipName": "guildServer",
+            "relationshipName": "guildSettings",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "welcomeMessage",
+            "otherEntityRelationshipName": "guildServer",
+            "relationshipName": "welcomeMessage",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "guildPoll",
+            "otherEntityRelationshipName": "pollServer",
+            "relationshipName": "serverPolls"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "scheduledAnnouncement",
+            "otherEntityRelationshipName": "annouceGuild",
+            "relationshipName": "guildAnnoucements"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "guildEvent",
+            "otherEntityRelationshipName": "eventGuild",
+            "relationshipName": "guildEvents"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "giveAway",
+            "otherEntityRelationshipName": "guildGiveAway",
+            "relationshipName": "giveAways"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "moderationLogItem",
+            "otherEntityRelationshipName": "modItemGuildServer",
+            "relationshipName": "modLogItems"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "serverLogItem",
+            "otherEntityRelationshipName": "serverItemGuildServer",
+            "relationshipName": "serverLogItems"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "tempBan",
+            "otherEntityRelationshipName": "tempBanGuildServer",
+            "relationshipName": "guildTempBans"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "mute",
+            "otherEntityRelationshipName": "mutedGuildServer",
+            "relationshipName": "mutedUsers"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "guildApplication",
+            "otherEntityRelationshipName": "guildServer",
+            "relationshipName": "guildApplications"
+        }
+    ],
+    "changelogDate": "20191002004542",
+    "javadoc": "Represents a Guild Server (Discord Server)\\n@author Mark Tripoli",
+    "entityTableName": "guild_server",
+    "dto": "no",
+    "pagination": "infinite-scroll",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "bot",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

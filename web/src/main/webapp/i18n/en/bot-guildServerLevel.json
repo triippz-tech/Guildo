@@ -1,0 +1,9 @@
+{
+  "webApp": {
+    "GuildServerLevel": {
+      "null": "",
+      "STANDARD": "STANDARD",
+      "PRO": "PRO"
+    }
+  }
+}

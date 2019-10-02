@@ -1,0 +1,31 @@
+{
+  "webApp": {
+    "botScheduledAnnouncement": {
+      "home": {
+        "title": "Scheduled Announcements",
+        "createLabel": "Create a new Scheduled Announcement",
+        "createOrEditLabel": "Create or edit a Scheduled Announcement",
+        "notFound": "No Scheduled Announcements found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Scheduled Announcement {{ id }}?"
+      },
+      "detail": {
+        "title": "Scheduled Announcement"
+      },
+      "annoucementTitle": "Annoucement Title",
+      "annoucementImgUrl": "Annoucement Img Url",
+      "annoucementMessage": "Annoucement Message",
+      "annoucementFire": "Annoucement Fire",
+      "guildId": "Guild Id",
+      "annouceGuild": "Annouce Guild"
+    }
+  },
+  "botApp": {
+    "botScheduledAnnouncement": {
+      "created": "A new Scheduled Announcement is created with identifier {{ param }}",
+      "updated": "A Scheduled Announcement is updated with identifier {{ param }}",
+      "deleted": "A Scheduled Announcement is deleted with identifier {{ param }}"
+    }
+  }
+}

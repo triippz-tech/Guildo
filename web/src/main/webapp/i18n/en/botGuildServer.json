@@ -1,0 +1,43 @@
+{
+  "webApp": {
+    "botGuildServer": {
+      "home": {
+        "title": "Guild Servers",
+        "createLabel": "Create a new Guild Server",
+        "createOrEditLabel": "Create or edit a Guild Server",
+        "notFound": "No Guild Servers found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Server {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Server"
+      },
+      "guildId": "Guild Id",
+      "guildName": "Guild Name",
+      "icon": "Icon",
+      "owner": "Owner",
+      "serverLevel": "Server Level",
+      "guildProfile": "Guild Profile",
+      "applicationForm": "Application Form",
+      "guildSettings": "Guild Settings",
+      "welcomeMessage": "Welcome Message",
+      "serverPolls": "Server Polls",
+      "guildAnnoucements": "Guild Annoucements",
+      "guildEvents": "Guild Events",
+      "giveAways": "Give Aways",
+      "modLogItems": "Mod Log Items",
+      "serverLogItems": "Server Log Items",
+      "guildTempBans": "Guild Temp Bans",
+      "mutedUsers": "Muted Users",
+      "guildApplications": "Guild Applications"
+    }
+  },
+  "botApp": {
+    "botGuildServer": {
+      "created": "A new Guild Server is created with identifier {{ param }}",
+      "updated": "A Guild Server is updated with identifier {{ param }}",
+      "deleted": "A Guild Server is deleted with identifier {{ param }}"
+    }
+  }
+}

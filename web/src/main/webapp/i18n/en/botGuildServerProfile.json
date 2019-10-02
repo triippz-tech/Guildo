@@ -1,0 +1,30 @@
+{
+  "webApp": {
+    "botGuildServerProfile": {
+      "home": {
+        "title": "Guild Server Profiles",
+        "createLabel": "Create a new Guild Server Profile",
+        "createOrEditLabel": "Create or edit a Guild Server Profile",
+        "notFound": "No Guild Server Profiles found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Server Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Server Profile"
+      },
+      "guildType": "Guild Type",
+      "playStyle": "Play Style",
+      "description": "Description",
+      "website": "Website",
+      "discordUrl": "Discord Url"
+    }
+  },
+  "botApp": {
+    "botGuildServerProfile": {
+      "created": "A new Guild Server Profile is created with identifier {{ param }}",
+      "updated": "A Guild Server Profile is updated with identifier {{ param }}",
+      "deleted": "A Guild Server Profile is deleted with identifier {{ param }}"
+    }
+  }
+}

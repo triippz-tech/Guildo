@@ -1,0 +1,41 @@
+{
+  "generator-jhipster": {
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "enableHibernateCache": false,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": true,
+    "jhiPrefix": "gdo",
+    "languages": [
+      "en"
+    ],
+    "messageBroker": false,
+    "nativeLanguage": "en",
+    "packageName": "com.triippztech.guildo",
+    "packageFolder": "com/triippztech/guildo",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "serviceDiscoveryType": "eureka",
+    "skipClient": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "baseName": "blog",
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "skipUserManagement": true,
+    "cacheProvider": "no",
+    "serverPort": "8083",
+    "buildTool": "maven",
+    "clientPackageManager": "npm",
+    "jhipsterVersion": "6.3.1",
+    "embeddableLaunchScript": false,
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "blueprints": []
+  },
+  "entities": [
+    "Page",
+    "RootPage"
+  ]
+}

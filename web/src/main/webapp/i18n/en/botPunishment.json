@@ -1,0 +1,29 @@
+{
+  "webApp": {
+    "botPunishment": {
+      "home": {
+        "title": "Punishments",
+        "createLabel": "Create a new Punishment",
+        "createOrEditLabel": "Create or edit a Punishment",
+        "notFound": "No Punishments found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Punishment {{ id }}?"
+      },
+      "detail": {
+        "title": "Punishment"
+      },
+      "maxStrikes": "Max Strikes",
+      "action": "Action",
+      "punishmentDuration": "Punishment Duration",
+      "guildId": "Guild Id"
+    }
+  },
+  "botApp": {
+    "botPunishment": {
+      "created": "A new Punishment is created with identifier {{ param }}",
+      "updated": "A Punishment is updated with identifier {{ param }}",
+      "deleted": "A Punishment is deleted with identifier {{ param }}"
+    }
+  }
+}

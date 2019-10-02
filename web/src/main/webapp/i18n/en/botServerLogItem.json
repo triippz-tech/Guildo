@@ -1,0 +1,33 @@
+{
+  "webApp": {
+    "botServerLogItem": {
+      "home": {
+        "title": "Server Log Items",
+        "createLabel": "Create a new Server Log Item",
+        "createOrEditLabel": "Create or edit a Server Log Item",
+        "notFound": "No Server Log Items found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Server Log Item {{ id }}?"
+      },
+      "detail": {
+        "title": "Server Log Item"
+      },
+      "activity": "Activity",
+      "channelId": "Channel Id",
+      "channelName": "Channel Name",
+      "time": "Time",
+      "userId": "User Id",
+      "userName": "User Name",
+      "guildId": "Guild Id",
+      "serverItemGuildServer": "Server Item Guild Server"
+    }
+  },
+  "botApp": {
+    "botServerLogItem": {
+      "created": "A new Server Log Item is created with identifier {{ param }}",
+      "updated": "A Server Log Item is updated with identifier {{ param }}",
+      "deleted": "A Server Log Item is deleted with identifier {{ param }}"
+    }
+  }
+}

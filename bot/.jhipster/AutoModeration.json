@@ -1,0 +1,102 @@
+{
+    "name": "AutoModeration",
+    "fields": [
+        {
+            "fieldName": "inviteStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "copyPastaStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "everyoneMentionStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "referralStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "duplicateStrikes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "resolveUrls",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "enabled",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "autoModIgnore",
+            "otherEntityRelationshipName": "autoModeration",
+            "relationshipName": "ignoreConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "autoModMentions",
+            "otherEntityRelationshipName": "autoModeration",
+            "relationshipName": "mentionConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "autoModAntiDup",
+            "otherEntityRelationshipName": "autoModeration",
+            "relationshipName": "antiDupConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "autoModAutoRaid",
+            "otherEntityRelationshipName": "autoModeration",
+            "relationshipName": "autoRaidConfig",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20191002004533",
+    "javadoc": "Represents the automoderation configuration\\nfor a specific guild\\n@author Mark Tripoli",
+    "entityTableName": "auto_moderation",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

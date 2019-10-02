@@ -1,0 +1,27 @@
+{
+  "webApp": {
+    "botAutoModIgnore": {
+      "home": {
+        "title": "Auto Mod Ignores",
+        "createLabel": "Create a new Auto Mod Ignore",
+        "createOrEditLabel": "Create or edit a Auto Mod Ignore",
+        "notFound": "No Auto Mod Ignores found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Auto Mod Ignore {{ id }}?"
+      },
+      "detail": {
+        "title": "Auto Mod Ignore"
+      },
+      "roleId": "Role Id",
+      "channelId": "Channel Id"
+    }
+  },
+  "botApp": {
+    "botAutoModIgnore": {
+      "created": "A new Auto Mod Ignore is created with identifier {{ param }}",
+      "updated": "A Auto Mod Ignore is updated with identifier {{ param }}",
+      "deleted": "A Auto Mod Ignore is deleted with identifier {{ param }}"
+    }
+  }
+}

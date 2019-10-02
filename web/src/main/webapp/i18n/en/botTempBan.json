@@ -1,0 +1,31 @@
+{
+  "webApp": {
+    "botTempBan": {
+      "home": {
+        "title": "Temp Bans",
+        "createLabel": "Create a new Temp Ban",
+        "createOrEditLabel": "Create or edit a Temp Ban",
+        "notFound": "No Temp Bans found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Temp Ban {{ id }}?"
+      },
+      "detail": {
+        "title": "Temp Ban"
+      },
+      "reason": "Reason",
+      "endTime": "End Time",
+      "guildId": "Guild Id",
+      "userId": "User Id",
+      "bannedUser": "Banned User",
+      "tempBanGuildServer": "Temp Ban Guild Server"
+    }
+  },
+  "botApp": {
+    "botTempBan": {
+      "created": "A new Temp Ban is created with identifier {{ param }}",
+      "updated": "A Temp Ban is updated with identifier {{ param }}",
+      "deleted": "A Temp Ban is deleted with identifier {{ param }}"
+    }
+  }
+}

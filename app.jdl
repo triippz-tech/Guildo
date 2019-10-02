@@ -1,0 +1,454 @@
+application {
+  config {
+    databaseType sql
+    devDatabaseType h2Disk
+    enableHibernateCache true
+    enableSwaggerCodegen true
+    enableTranslation true
+    jhiPrefix gdo
+    languages [en]
+    messageBroker kafka
+    nativeLanguage en
+    packageName com.triippztech.guildo
+    prodDatabaseType postgresql
+    searchEngine false
+    serviceDiscoveryType eureka
+    skipClient false
+    skipServer false
+    testFrameworks [protractor]
+    websocket spring-websocket
+    applicationType gateway
+    baseName web
+    serverPort 8081
+    authenticationType oauth2
+    cacheProvider hazelcast
+    buildTool maven
+    clientFramework react
+    useSass true
+    skipUserManagement true
+    clientPackageManager npm
+  }
+
+  entities AutoModAntiDup, AutoModAutoRaid, AutoModIgnore, AutoModMentions, AutoModeration, DiscordUser, DiscordUserProfile, GiveAway, GuildApplication, GuildApplicationForm, GuildEvent, GuildPoll, GuildPollItem, GuildServer, GuildServerProfile, GuildServerSettings, ModerationLogItem, Mute, Page, Punishment, RootPage, ScheduledAnnouncement, ServerLogItem, TempBan, WelcomeMessage
+}
+
+application {
+  config {
+    databaseType sql
+    devDatabaseType h2Disk
+    enableHibernateCache false
+    enableSwaggerCodegen false
+    enableTranslation true
+    jhiPrefix gdo
+    languages [en]
+    messageBroker kafka
+    nativeLanguage en
+    packageName com.triippztech.guildo
+    prodDatabaseType postgresql
+    searchEngine false
+    serviceDiscoveryType eureka
+    testFrameworks []
+    websocket false
+    baseName bot
+    applicationType microservice
+    authenticationType oauth2
+    skipUserManagement true
+    cacheProvider no
+    serverPort 8082
+    buildTool maven
+    clientPackageManager npm
+  }
+
+  entities AutoModAntiDup, AutoModAutoRaid, AutoModIgnore, AutoModMentions, AutoModeration, DiscordUser, DiscordUserProfile, GiveAway, GuildApplication, GuildApplicationForm, GuildEvent, GuildPoll, GuildPollItem, GuildServer, GuildServerProfile, GuildServerSettings, ModerationLogItem, Mute, Punishment, ScheduledAnnouncement, ServerLogItem, TempBan, WelcomeMessage
+}
+
+application {
+  config {
+    databaseType sql
+    devDatabaseType h2Disk
+    enableHibernateCache false
+    enableSwaggerCodegen false
+    enableTranslation true
+    jhiPrefix gdo
+    languages [en]
+    messageBroker false
+    nativeLanguage en
+    packageName com.triippztech.guildo
+    prodDatabaseType postgresql
+    searchEngine false
+    serviceDiscoveryType eureka
+    testFrameworks []
+    websocket false
+    baseName blog
+    applicationType microservice
+    authenticationType oauth2
+    skipUserManagement true
+    cacheProvider no
+    serverPort 8083
+    buildTool maven
+    clientPackageManager npm
+  }
+
+  entities Page, RootPage
+}
+
+/**
+ * Represents the Anti Duplicates configuration\n@author Mark Tripoli
+ */
+entity AutoModAntiDup {
+  deleteThreshold Integer required,
+  dupsToPunish Integer required
+}
+/**
+ * Represents The AutoRaid configuration. This\nis used to determine if autoraid is enabled\nand the threshhold to look back in time to see\nhow many users have joined the server recently\n@author Mark Tripoli
+ */
+entity AutoModAutoRaid {
+  autoRaidEnabled Boolean required,
+  autoRaidTimeThreshold Integer required
+}
+/**
+ * Represents the the roles and in what channel\nwill be ignored (text) when AutoModeration is enabled\n@author Mark Tripoli
+ */
+entity AutoModIgnore {
+  roleId Long required,
+  channelId Long required
+}
+/**
+ * Represents the max number of role mentions(@everyone),\nmax number of lines allowed in a text message, and the max number\nof mentions a discord user may write.\n@author Mark Tripoli
+ */
+entity AutoModMentions {
+  maxMentions Integer required,
+  maxMsgLines Integer required,
+  maxRoleMentions Integer required
+}
+/**
+ * Represents the automoderation configuration\nfor a specific guild\n@author Mark Tripoli
+ */
+entity AutoModeration {
+  inviteStrikes Integer required,
+  copyPastaStrikes Integer required,
+  everyoneMentionStrikes Integer required,
+  referralStrikes Integer required,
+  duplicateStrikes Integer required,
+  resolveUrls Boolean required,
+  enabled Boolean required
+}
+/**
+ * Represents a physical Discord user used by Guildo.\n@author Mark Tripoli
+ */
+entity DiscordUser {
+  userId Long required unique,
+  userName String required,
+  icon String,
+  commandsIssued Integer required,
+  blacklisted Boolean required,
+  userLevel DiscordUserLevel required
+}
+/**
+ * Represents the Guildo Bot profile for a specific\nDiscord User.\n@author Mark Tripoli
+ */
+entity DiscordUserProfile {
+  favoriteGame String,
+  profilePhoto String,
+  twitterUrl String,
+  twitchUrl String,
+  youtubeUrl String,
+  facebookUrl String,
+  hitboxUrl String,
+  beamUrl String
+}
+/**
+ * Represents A Giveaway which a Guild User may create\n@author Mark Tripoli
+ */
+entity GiveAway {
+  name String required maxlength(250),
+  image String,
+  message TextBlob required,
+  messageId Long required,
+  textChannelId Long required,
+  finish Instant required,
+  expired Boolean required,
+  guildId Long
+}
+/**
+ * Represents an application to a specific guild from a discord user\n@author Mark Tripoli
+ */
+entity GuildApplication {
+  characterName String required,
+  characterType String required,
+  applicationFile AnyBlob,
+  status ApplicationStatus required
+}
+/**
+ * Represents the Application Form (doc,txt, etc.) which a Discord User\nmay need to fillout and submit within their application\n@author Mark Tripoli
+ */
+entity GuildApplicationForm {
+  applicationForm AnyBlob required,
+  guildId Long required
+}
+/**
+ * Represents an Event owned by a guild (raid, dungeon, etc)\n@author Mark Tripoli
+ */
+entity GuildEvent {
+  eventName String required maxlength(250),
+  eventImageUrl String required maxlength(250),
+  eventMessage TextBlob required,
+  eventStart Instant required,
+  guildId Long
+}
+/**
+ * Represents a Poll an authorized Discord User\nmay create in a particular Guild\n@author Mark Tripoli
+ */
+entity GuildPoll {
+  pollName String required,
+  description String required,
+  textChannelId Long required,
+  finishTime LocalDate required,
+  completed Boolean required,
+  guildId Long
+}
+/**
+ * Represents an Item which will be placed\ninto the Poll. Used to create a list of items.\n@author Mark Tripoli
+ */
+entity GuildPollItem {
+  itemName String required,
+  votes Integer required
+}
+/**
+ * Represents a Guild Server (Discord Server)\n@author Mark Tripoli
+ */
+entity GuildServer {
+  guildId Long required unique,
+  guildName String required,
+  icon String,
+  owner Long required,
+  serverLevel GuildServerLevel required
+}
+/**
+ * Represents the specific details of a Guild\n@author Mark Tripoli
+ */
+entity GuildServerProfile {
+  guildType GuildType,
+  playStyle GuildPlayStyle,
+  description String,
+  website String,
+  discordUrl String
+}
+
+/**
+ * Represents the Guildo settings of a particular Guild\n@author Mark Tripoli
+ */
+entity GuildServerSettings {
+  prefix String maxlength(40),
+  timezone String maxlength(32),
+  raidModeEnabled Boolean required,
+  raidModeReason String required,
+  maxStrikes Integer required,
+  acceptingApplications Boolean required
+}
+/**
+ * Represents a Log Entry of all Moderator\nspecific actions on Users (kicks, bans, etc.)\n@author Mark Tripoli
+ */
+entity ModerationLogItem {
+  channelId Long required,
+  channelName String required,
+  issuedById Long required,
+  issuedByName String required,
+  issuedToId Long required,
+  issuedToName String required,
+  reason String required,
+  time Instant required,
+  moderationAction PunishmentType,
+  guildId Long
+}
+/**
+ * Represents a temprary muting of a Discord user within a guild\n@author Mark Tripoli
+ */
+entity Mute {
+  reason String required,
+  endTime String required
+  guildId Long,
+  userId Long
+}
+/**
+ * Represents the a punishment a moderator\nmay hand to a Discord User in their server\n@author Mark Tripoli
+ */
+entity Punishment {
+  maxStrikes Integer required,
+  action PunishmentType required,
+  punishmentDuration Instant,
+  guildId Long
+}
+/**
+ * Represents an Annoucement which will be broadcasted\nacross a Discord Server at a later date\n@author Mark Tripoli
+ */
+entity ScheduledAnnouncement {
+  annoucementTitle String required maxlength(250),
+  annoucementImgUrl String required maxlength(250),
+  annoucementMessage TextBlob required,
+  annoucementFire Instant required,
+  guildId Long required
+}
+/**
+ * Represents a Log entry of all service specific events (name changes, avatar change, etc)\n@author Mark Tripoli
+ */
+entity ServerLogItem {
+  activity Activity required,
+  channelId Long required,
+  channelName String required,
+  time Instant required,
+  userId Long required,
+  userName String required,
+  guildId Long required
+}
+/**
+ * Represents a temporary ban of a Discord user from a guild\n@author Mark Tripoli
+ */
+entity TempBan {
+  reason String required,
+  endTime Instant required,
+  guildId Long required,
+  userId Long required
+}
+/**
+ * Represents A welcome message used to greet\nnew users to a Guild\n@author Mark Tripoli
+ */
+entity WelcomeMessage {
+  name String required,
+  messageTitle String required,
+  body String required,
+  footer String required,
+  logoUrl String,
+  guildId Long required
+}
+
+entity Page {
+  title String required,
+  slug String maxlength(50) required,
+  published Instant required,
+  edited Instant,
+  body TextBlob required
+}
+entity RootPage {
+  title String maxlength(10) required,
+  slug String maxlength(50) required
+}
+
+enum DiscordUserLevel {
+  STANDARD,
+  SUPPORTER,
+  OWNER,
+  DEVELOPER
+}
+enum ApplicationStatus {
+  ACCEPTED,
+  PENDING,
+  NEW
+}
+enum GuildServerLevel {
+  STANDARD,
+  PRO
+}
+enum GuildType {
+  CASUAL,
+  SEMI_PRO,
+  PRO
+}
+enum GuildPlayStyle {
+  RP,
+  PVP,
+  PVE,
+  WPVP,
+  RAIDING,
+  CHILL,
+  ANY,
+  OTHER
+}
+enum PunishmentType {
+  NONE, KICK, BAN, TEMP_BAN, MUTE, TEMP_MUTE, UN_BAN
+}
+enum Activity {
+  SERVER_JOIN,
+  SERVER_QUIT,
+  CHANNEL_JOIN,
+  CHANNEL_LEAVE,
+  NAME_CHANGE,
+  AVATAR_CHANGE
+}
+
+enum ModLogFilter {
+  ALL, BAN, UNBAN, KICK, MUTE
+}
+
+enum ReturnStatus {
+  SUCCESS, FAILIRE, WARNING
+}
+
+relationship OneToOne {
+  AutoModeration{ignoreConfig} to AutoModIgnore,
+  AutoModeration{mentionConfig} to AutoModMentions,
+  AutoModeration{antiDupConfig} to AutoModAntiDup,
+  AutoModeration{autoRaidConfig} to AutoModAutoRaid,
+  
+  DiscordUser{userProfile} to DiscordUserProfile,
+  
+  GiveAway{winner} to DiscordUser,
+  
+  GuildApplication{acceptedBy} to DiscordUser,
+  
+  GuildServer{guildProfile} to GuildServerProfile,
+  GuildServer{applicationForm} to GuildApplicationForm,
+  GuildServer{guildSettings} to GuildServerSettings,
+  GuildServer{welcomeMessage} to WelcomeMessage,
+  
+  GuildServerSettings{autoModConfig} to AutoModeration,
+  GuildServerSettings{punishmentConfig} to Punishment
+}
+
+relationship OneToMany {
+	RootPage{childPages} to Page,
+    
+    DiscordUser{userTempBans} to TempBan{bannedUser},
+    DiscordUser{userMutes} to Mute{mutedUser},
+    DiscordUser{userApplications} to GuildApplication{appliedUser},
+    
+    GuildServer{serverPolls} to GuildPoll{pollServer},
+    GuildServer{guildAnnoucements} to ScheduledAnnouncement{annouceGuild},
+    GuildServer{guildEvents} to GuildEvent{eventGuild},
+    GuildServer{giveAways} to GiveAway{guildGiveAway},
+    GuildServer{modLogItems} to ModerationLogItem{modItemGuildServer},
+    GuildServer{serverLogItems} to ServerLogItem{serverItemGuildServer},
+    GuildServer{guildTempBans} to TempBan{tempBanGuildServer},
+    GuildServer{mutedUsers} to Mute{mutedGuildServer},
+    GuildServer{guildApplications} to GuildApplication{guildServer},
+    
+    GuildPoll{pollItems} to GuildPollItem
+}
+
+service * with serviceClass
+microservice AutoModAntiDup, AutoModAutoRaid, AutoModIgnore, AutoModMentions, AutoModeration, DiscordUser, DiscordUserProfile, GiveAway, GuildApplication, GuildApplicationForm, GuildEvent, GuildPoll, GuildPollItem, GuildServer, GuildServerProfile, GuildServerSettings, ModerationLogItem, Mute, Punishment, ScheduledAnnouncement, ServerLogItem, TempBan, WelcomeMessage with bot
+microservice Page, RootPage with blog
+filter AutoModAntiDup, AutoModAutoRaid, AutoModIgnore, AutoModMentions, AutoModeration, DiscordUser, DiscordUserProfile, GiveAway, GuildApplication, GuildApplicationForm, GuildEvent, GuildPoll, GuildPollItem, GuildServer, GuildServerProfile, GuildServerSettings, ModerationLogItem, Mute, Punishment, ScheduledAnnouncement, ServerLogItem, TempBan, WelcomeMessage
+clientRootFolder DiscordUser, GuildServer, ModerationLogItem, TempBan with bot
+paginate GuildServer, DiscordUser with infinite-scroll
+
+
+deployment {
+  deploymentType docker-compose
+  appsFolders [web, bot, blog]
+  dockerRepositoryName "guildo"
+  consoleOptions [zipkin]
+  gatewayType zuul
+  monitoring elk
+  serviceDiscoveryType eureka
+}
+
+deployment {
+  deploymentType kubernetes
+  appsFolders [web, bot, blog]
+  dockerRepositoryName "guildo"
+  consoleOptions [zipkin]
+  gatewayType zuul
+  monitoring elk
+  serviceDiscoveryType eureka
+}

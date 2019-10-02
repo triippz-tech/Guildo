@@ -1,0 +1,56 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: bot-postgresql
+  namespace: default
+  labels:
+    app: bot-postgresql
+type: Opaque
+data:
+  postgresql-password: MjEzMGIwZTgxZTEzZWI2ODU4MTMyYWQ4ZThkOTVlNTc2OTIwMDRjYjkwMGEyNWQ0OWQ4MThkYmNmNjQ5MGI1MDA0MTU4YTUzOTU0NTkwOTI2NzlmYzE5ZjhmNGU0MjE0ZDAzZDAyMzQ4NDVlZjRjZWU1MjlhNjc2ZTgwYzhkMGQzZGJlMTFjMGFkNmUxYzgzMDExOWZmNWMwNTc1ZjViMDU2OWZjNmMzMjk0NzlmZmMzM2IyYjhiZThlNWY1NDU2MjBhNmE2NjFiY2JjOTRkNzJmZjI0MDM4ZjI4ZTk5Mjk2YmI2NGViZGU2ZjZiZjI5YjE2ZjM1Njk4ZmJjZDMzZA==
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bot-postgresql
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: bot-postgresql
+  template:
+    metadata:
+      labels:
+        app: bot-postgresql
+    spec:
+      volumes:
+        - name: data
+          emptyDir: {}
+      containers:
+        - name: postgres
+          image: postgres:11.5
+          env:
+            - name: POSTGRES_USER
+              value: bot
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: bot-postgresql
+                  key: postgresql-password
+          ports:
+            - containerPort: 5432
+          volumeMounts:
+            - name: data
+              mountPath: /var/lib/postgresql/
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bot-postgresql
+  namespace: default
+spec:
+  selector:
+    app: bot-postgresql
+  ports:
+    - port: 5432

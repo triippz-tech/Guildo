@@ -1,0 +1,11 @@
+{
+  "webApp": {
+    "DiscordUserLevel": {
+      "null": "",
+      "STANDARD": "STANDARD",
+      "SUPPORTER": "SUPPORTER",
+      "OWNER": "OWNER",
+      "DEVELOPER": "DEVELOPER"
+    }
+  }
+}

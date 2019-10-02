@@ -1,0 +1,33 @@
+{
+  "webApp": {
+    "botGuildPoll": {
+      "home": {
+        "title": "Guild Polls",
+        "createLabel": "Create a new Guild Poll",
+        "createOrEditLabel": "Create or edit a Guild Poll",
+        "notFound": "No Guild Polls found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Poll {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Poll"
+      },
+      "pollName": "Poll Name",
+      "description": "Description",
+      "textChannelId": "Text Channel Id",
+      "finishTime": "Finish Time",
+      "completed": "Completed",
+      "guildId": "Guild Id",
+      "pollItems": "Poll Items",
+      "pollServer": "Poll Server"
+    }
+  },
+  "botApp": {
+    "botGuildPoll": {
+      "created": "A new Guild Poll is created with identifier {{ param }}",
+      "updated": "A Guild Poll is updated with identifier {{ param }}",
+      "deleted": "A Guild Poll is deleted with identifier {{ param }}"
+    }
+  }
+}

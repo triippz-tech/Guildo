@@ -1,0 +1,10 @@
+{
+  "webApp": {
+    "GuildType": {
+      "null": "",
+      "CASUAL": "CASUAL",
+      "SEMI_PRO": "SEMI_PRO",
+      "PRO": "PRO"
+    }
+  }
+}

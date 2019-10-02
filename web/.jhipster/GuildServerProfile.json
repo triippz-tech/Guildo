@@ -1,0 +1,42 @@
+{
+    "name": "GuildServerProfile",
+    "fields": [
+        {
+            "fieldName": "guildType",
+            "fieldType": "GuildType",
+            "fieldValues": "CASUAL,SEMI_PRO,PRO"
+        },
+        {
+            "fieldName": "playStyle",
+            "fieldType": "GuildPlayStyle",
+            "fieldValues": "RP,PVP,PVE,WPVP,RAIDING,CHILL,ANY,OTHER"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "website",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "discordUrl",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004543",
+    "javadoc": "Represents the specific details of a Guild\\n@author Mark Tripoli",
+    "entityTableName": "guild_server_profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

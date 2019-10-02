@@ -1,0 +1,52 @@
+{
+    "name": "DiscordUserProfile",
+    "fields": [
+        {
+            "fieldName": "favoriteGame",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "profilePhoto",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitterUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "twitchUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "youtubeUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "facebookUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "hitboxUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "beamUrl",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191002004535",
+    "javadoc": "Represents the Guildo Bot profile for a specific\\nDiscord User.\\n@author Mark Tripoli",
+    "entityTableName": "discord_user_profile",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": [
+        "web",
+        "bot"
+    ],
+    "microserviceName": "bot"
+}

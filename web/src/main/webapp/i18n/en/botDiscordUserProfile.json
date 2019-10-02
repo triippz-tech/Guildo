@@ -1,0 +1,33 @@
+{
+  "webApp": {
+    "botDiscordUserProfile": {
+      "home": {
+        "title": "Discord User Profiles",
+        "createLabel": "Create a new Discord User Profile",
+        "createOrEditLabel": "Create or edit a Discord User Profile",
+        "notFound": "No Discord User Profiles found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Discord User Profile {{ id }}?"
+      },
+      "detail": {
+        "title": "Discord User Profile"
+      },
+      "favoriteGame": "Favorite Game",
+      "profilePhoto": "Profile Photo",
+      "twitterUrl": "Twitter Url",
+      "twitchUrl": "Twitch Url",
+      "youtubeUrl": "Youtube Url",
+      "facebookUrl": "Facebook Url",
+      "hitboxUrl": "Hitbox Url",
+      "beamUrl": "Beam Url"
+    }
+  },
+  "botApp": {
+    "botDiscordUserProfile": {
+      "created": "A new Discord User Profile is created with identifier {{ param }}",
+      "updated": "A Discord User Profile is updated with identifier {{ param }}",
+      "deleted": "A Discord User Profile is deleted with identifier {{ param }}"
+    }
+  }
+}

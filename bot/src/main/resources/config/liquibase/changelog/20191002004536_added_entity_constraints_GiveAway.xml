@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity GiveAway.
+    -->
+    <changeSet id="20191002004536-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="winner_id"
+                                 baseTableName="give_away"
+                                 constraintName="fk_give_away_winner_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="discord_user"/>
+
+        <addForeignKeyConstraint baseColumnNames="guild_give_away_id"
+                                 baseTableName="give_away"
+                                 constraintName="fk_give_away_guild_give_away_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_server"/>
+
+    </changeSet>
+</databaseChangeLog>

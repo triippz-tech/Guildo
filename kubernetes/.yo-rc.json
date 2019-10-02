@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "deploymentType": "kubernetes",
+    "gatewayType": "zuul",
+    "monitoring": "elk",
+    "directoryPath": "../",
+    "appsFolders": [
+      "web",
+      "bot",
+      "blog"
+    ],
+    "clusteredDbApps": [],
+    "consoleOptions": [
+      "zipkin"
+    ],
+    "serviceDiscoveryType": "eureka",
+    "dockerRepositoryName": "guildo",
+    "dockerPushCommand": "docker push",
+    "kubernetesNamespace": "default",
+    "kubernetesServiceType": "LoadBalancer",
+    "ingressDomain": "",
+    "istio": false,
+    "jwtSecretKey": "N2RkYjkzYjUxY2NlYzhhZWFmN2U4ODUyNmMyNjllZThjNTIxNTdkYzA1YzFlMTQyZDEyZGE5OTM1MzA5ZDNmMDdmNDc3NzI1NzFmZGQzZTgyNzM1YWJmOTI3NWZiMmUxMTFmNQ=="
+  }
+}

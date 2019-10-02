@@ -1,0 +1,31 @@
+{
+  "webApp": {
+    "botMute": {
+      "home": {
+        "title": "Mutes",
+        "createLabel": "Create a new Mute",
+        "createOrEditLabel": "Create or edit a Mute",
+        "notFound": "No Mutes found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Mute {{ id }}?"
+      },
+      "detail": {
+        "title": "Mute"
+      },
+      "reason": "Reason",
+      "endTime": "End Time",
+      "guildId": "Guild Id",
+      "userId": "User Id",
+      "mutedUser": "Muted User",
+      "mutedGuildServer": "Muted Guild Server"
+    }
+  },
+  "botApp": {
+    "botMute": {
+      "created": "A new Mute is created with identifier {{ param }}",
+      "updated": "A Mute is updated with identifier {{ param }}",
+      "deleted": "A Mute is deleted with identifier {{ param }}"
+    }
+  }
+}

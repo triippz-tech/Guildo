@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity GuildServer.
+    -->
+    <changeSet id="20191002004542-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="guild_profile_id"
+                                 baseTableName="guild_server"
+                                 constraintName="fk_guild_server_guild_profile_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_server_profile"/>
+
+        <addForeignKeyConstraint baseColumnNames="application_form_id"
+                                 baseTableName="guild_server"
+                                 constraintName="fk_guild_server_application_form_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_application_form"/>
+
+        <addForeignKeyConstraint baseColumnNames="guild_settings_id"
+                                 baseTableName="guild_server"
+                                 constraintName="fk_guild_server_guild_settings_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="guild_server_settings"/>
+
+        <addForeignKeyConstraint baseColumnNames="welcome_message_id"
+                                 baseTableName="guild_server"
+                                 constraintName="fk_guild_server_welcome_message_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="welcome_message"/>
+
+    </changeSet>
+</databaseChangeLog>

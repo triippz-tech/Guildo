@@ -1,0 +1,11 @@
+version: '2'
+services:
+  bot-postgresql:
+    image: postgres:11.5
+    # volumes:
+    #     - ~/volumes/jhipster/bot/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=bot
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5433:5433
