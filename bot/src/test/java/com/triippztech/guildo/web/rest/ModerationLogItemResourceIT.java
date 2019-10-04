@@ -5,10 +5,9 @@ import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.ModerationLogItem;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.ModerationLogItemRepository;
-import com.triippztech.guildo.service.ModerationLogItemService;
+import com.triippztech.guildo.service.moderation.ModerationLogItemService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.ModerationLogItemCriteria;
-import com.triippztech.guildo.service.ModerationLogItemQueryService;
+import com.triippztech.guildo.service.moderation.ModerationLogItemQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

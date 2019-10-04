@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.DiscordUser;
-import com.triippztech.guildo.service.DiscordUserService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.DiscordUserCriteria;
-import com.triippztech.guildo.service.DiscordUserQueryService;
+import com.triippztech.guildo.service.user.DiscordUserQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.PaginationUtil;
@@ -15,7 +15,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -9,19 +9,19 @@
             ]
         },
         {
-            "fieldName": "endTime",
-            "fieldType": "String",
-            "fieldValidateRules": [
-                "required"
-            ]
-        },
-        {
             "fieldName": "guildId",
             "fieldType": "Long"
         },
         {
             "fieldName": "userId",
             "fieldType": "Long"
+        },
+        {
+            "fieldName": "endTime",
+            "fieldType": "Instant",
+            "fieldValidateRules": [
+                "required"
+            ]
         }
     ],
     "relationships": [
@@ -48,10 +48,12 @@
     "service": "serviceClass",
     "jpaMetamodelFiltering": true,
     "fluentMethods": true,
-    "clientRootFolder": "",
+    "clientRootFolder": "bot",
     "applications": [
         "web",
         "bot"
     ],
-    "microserviceName": "bot"
+    "microserviceName": "bot",
+    "searchEngine": false,
+    "databaseType": "sql"
 }

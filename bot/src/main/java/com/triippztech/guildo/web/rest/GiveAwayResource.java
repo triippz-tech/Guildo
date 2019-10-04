@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.GiveAway;
-import com.triippztech.guildo.service.GiveAwayService;
+import com.triippztech.guildo.service.guild.GiveAwayService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.GiveAwayCriteria;
-import com.triippztech.guildo.service.GiveAwayQueryService;
+import com.triippztech.guildo.service.guild.GiveAwayQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

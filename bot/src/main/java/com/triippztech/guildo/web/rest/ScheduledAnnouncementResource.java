@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.ScheduledAnnouncement;
-import com.triippztech.guildo.service.ScheduledAnnouncementService;
+import com.triippztech.guildo.service.guild.ScheduledAnnouncementService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.ScheduledAnnouncementCriteria;
-import com.triippztech.guildo.service.ScheduledAnnouncementQueryService;
+import com.triippztech.guildo.service.guild.ScheduledAnnouncementQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.AutoModAutoRaid;
 import com.triippztech.guildo.repository.AutoModAutoRaidRepository;
-import com.triippztech.guildo.service.AutoModAutoRaidService;
+import com.triippztech.guildo.service.moderation.AutoModAutoRaidService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.AutoModAutoRaidCriteria;
-import com.triippztech.guildo.service.AutoModAutoRaidQueryService;
+import com.triippztech.guildo.service.moderation.AutoModAutoRaidQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

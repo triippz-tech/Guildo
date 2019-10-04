@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.DiscordUserProfile;
 import com.triippztech.guildo.repository.DiscordUserProfileRepository;
-import com.triippztech.guildo.service.DiscordUserProfileService;
+import com.triippztech.guildo.service.user.DiscordUserProfileService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.DiscordUserProfileCriteria;
-import com.triippztech.guildo.service.DiscordUserProfileQueryService;
+import com.triippztech.guildo.service.user.DiscordUserProfileQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

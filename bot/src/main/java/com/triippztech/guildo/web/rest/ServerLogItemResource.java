@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.ServerLogItem;
-import com.triippztech.guildo.service.ServerLogItemService;
+import com.triippztech.guildo.service.moderation.ServerLogItemService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.ServerLogItemCriteria;
-import com.triippztech.guildo.service.ServerLogItemQueryService;
+import com.triippztech.guildo.service.moderation.ServerLogItemQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

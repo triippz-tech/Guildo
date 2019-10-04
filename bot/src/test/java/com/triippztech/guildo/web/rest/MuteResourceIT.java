@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.Mute;
 import com.triippztech.guildo.domain.DiscordUser;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.MuteRepository;
-import com.triippztech.guildo.service.MuteService;
+import com.triippztech.guildo.service.moderation.MuteService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.MuteCriteria;
-import com.triippztech.guildo.service.MuteQueryService;
+import com.triippztech.guildo.service.moderation.MuteQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -26,6 +25,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Validator;
 
 import javax.persistence.EntityManager;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 import static com.triippztech.guildo.web.rest.TestUtil.createFormattingConversionService;
@@ -44,9 +45,6 @@ public class MuteResourceIT {
     private static final String DEFAULT_REASON = "AAAAAAAAAA";
     private static final String UPDATED_REASON = "BBBBBBBBBB";
 
-    private static final String DEFAULT_END_TIME = "AAAAAAAAAA";
-    private static final String UPDATED_END_TIME = "BBBBBBBBBB";
-
     private static final Long DEFAULT_GUILD_ID = 1L;
     private static final Long UPDATED_GUILD_ID = 2L;
     private static final Long SMALLER_GUILD_ID = 1L - 1L;
@@ -54,6 +52,10 @@ public class MuteResourceIT {
     private static final Long DEFAULT_USER_ID = 1L;
     private static final Long UPDATED_USER_ID = 2L;
     private static final Long SMALLER_USER_ID = 1L - 1L;
+
+    private static final Instant DEFAULT_END_TIME = Instant.ofEpochMilli(0L);
+    private static final Instant UPDATED_END_TIME = Instant.now().truncatedTo(ChronoUnit.MILLIS);
+    private static final Instant SMALLER_END_TIME = Instant.ofEpochMilli(-1L);
 
     @Autowired
     private MuteRepository muteRepository;
@@ -104,9 +106,9 @@ public class MuteResourceIT {
     public static Mute createEntity(EntityManager em) {
         Mute mute = new Mute()
             .reason(DEFAULT_REASON)
-            .endTime(DEFAULT_END_TIME)
             .guildId(DEFAULT_GUILD_ID)
-            .userId(DEFAULT_USER_ID);
+            .userId(DEFAULT_USER_ID)
+            .endTime(DEFAULT_END_TIME);
         return mute;
     }
     /**
@@ -118,9 +120,9 @@ public class MuteResourceIT {
     public static Mute createUpdatedEntity(EntityManager em) {
         Mute mute = new Mute()
             .reason(UPDATED_REASON)
-            .endTime(UPDATED_END_TIME)
             .guildId(UPDATED_GUILD_ID)
-            .userId(UPDATED_USER_ID);
+            .userId(UPDATED_USER_ID)
+            .endTime(UPDATED_END_TIME);
         return mute;
     }
 
@@ -145,9 +147,9 @@ public class MuteResourceIT {
         assertThat(muteList).hasSize(databaseSizeBeforeCreate + 1);
         Mute testMute = muteList.get(muteList.size() - 1);
         assertThat(testMute.getReason()).isEqualTo(DEFAULT_REASON);
-        assertThat(testMute.getEndTime()).isEqualTo(DEFAULT_END_TIME);
         assertThat(testMute.getGuildId()).isEqualTo(DEFAULT_GUILD_ID);
         assertThat(testMute.getUserId()).isEqualTo(DEFAULT_USER_ID);
+        assertThat(testMute.getEndTime()).isEqualTo(DEFAULT_END_TIME);
     }
 
     @Test
@@ -218,9 +220,9 @@ public class MuteResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(mute.getId().intValue())))
             .andExpect(jsonPath("$.[*].reason").value(hasItem(DEFAULT_REASON.toString())))
-            .andExpect(jsonPath("$.[*].endTime").value(hasItem(DEFAULT_END_TIME.toString())))
             .andExpect(jsonPath("$.[*].guildId").value(hasItem(DEFAULT_GUILD_ID.intValue())))
-            .andExpect(jsonPath("$.[*].userId").value(hasItem(DEFAULT_USER_ID.intValue())));
+            .andExpect(jsonPath("$.[*].userId").value(hasItem(DEFAULT_USER_ID.intValue())))
+            .andExpect(jsonPath("$.[*].endTime").value(hasItem(DEFAULT_END_TIME.toString())));
     }
     
     @Test
@@ -235,9 +237,9 @@ public class MuteResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.id").value(mute.getId().intValue()))
             .andExpect(jsonPath("$.reason").value(DEFAULT_REASON.toString()))
-            .andExpect(jsonPath("$.endTime").value(DEFAULT_END_TIME.toString()))
             .andExpect(jsonPath("$.guildId").value(DEFAULT_GUILD_ID.intValue()))
-            .andExpect(jsonPath("$.userId").value(DEFAULT_USER_ID.intValue()));
+            .andExpect(jsonPath("$.userId").value(DEFAULT_USER_ID.intValue()))
+            .andExpect(jsonPath("$.endTime").value(DEFAULT_END_TIME.toString()));
     }
 
     @Test
@@ -277,45 +279,6 @@ public class MuteResourceIT {
 
         // Get all the muteList where reason is null
         defaultMuteShouldNotBeFound("reason.specified=false");
-    }
-
-    @Test
-    @Transactional
-    public void getAllMutesByEndTimeIsEqualToSomething() throws Exception {
-        // Initialize the database
-        muteRepository.saveAndFlush(mute);
-
-        // Get all the muteList where endTime equals to DEFAULT_END_TIME
-        defaultMuteShouldBeFound("endTime.equals=" + DEFAULT_END_TIME);
-
-        // Get all the muteList where endTime equals to UPDATED_END_TIME
-        defaultMuteShouldNotBeFound("endTime.equals=" + UPDATED_END_TIME);
-    }
-
-    @Test
-    @Transactional
-    public void getAllMutesByEndTimeIsInShouldWork() throws Exception {
-        // Initialize the database
-        muteRepository.saveAndFlush(mute);
-
-        // Get all the muteList where endTime in DEFAULT_END_TIME or UPDATED_END_TIME
-        defaultMuteShouldBeFound("endTime.in=" + DEFAULT_END_TIME + "," + UPDATED_END_TIME);
-
-        // Get all the muteList where endTime equals to UPDATED_END_TIME
-        defaultMuteShouldNotBeFound("endTime.in=" + UPDATED_END_TIME);
-    }
-
-    @Test
-    @Transactional
-    public void getAllMutesByEndTimeIsNullOrNotNull() throws Exception {
-        // Initialize the database
-        muteRepository.saveAndFlush(mute);
-
-        // Get all the muteList where endTime is not null
-        defaultMuteShouldBeFound("endTime.specified=true");
-
-        // Get all the muteList where endTime is null
-        defaultMuteShouldNotBeFound("endTime.specified=false");
     }
 
     @Test
@@ -504,6 +467,45 @@ public class MuteResourceIT {
 
     @Test
     @Transactional
+    public void getAllMutesByEndTimeIsEqualToSomething() throws Exception {
+        // Initialize the database
+        muteRepository.saveAndFlush(mute);
+
+        // Get all the muteList where endTime equals to DEFAULT_END_TIME
+        defaultMuteShouldBeFound("endTime.equals=" + DEFAULT_END_TIME);
+
+        // Get all the muteList where endTime equals to UPDATED_END_TIME
+        defaultMuteShouldNotBeFound("endTime.equals=" + UPDATED_END_TIME);
+    }
+
+    @Test
+    @Transactional
+    public void getAllMutesByEndTimeIsInShouldWork() throws Exception {
+        // Initialize the database
+        muteRepository.saveAndFlush(mute);
+
+        // Get all the muteList where endTime in DEFAULT_END_TIME or UPDATED_END_TIME
+        defaultMuteShouldBeFound("endTime.in=" + DEFAULT_END_TIME + "," + UPDATED_END_TIME);
+
+        // Get all the muteList where endTime equals to UPDATED_END_TIME
+        defaultMuteShouldNotBeFound("endTime.in=" + UPDATED_END_TIME);
+    }
+
+    @Test
+    @Transactional
+    public void getAllMutesByEndTimeIsNullOrNotNull() throws Exception {
+        // Initialize the database
+        muteRepository.saveAndFlush(mute);
+
+        // Get all the muteList where endTime is not null
+        defaultMuteShouldBeFound("endTime.specified=true");
+
+        // Get all the muteList where endTime is null
+        defaultMuteShouldNotBeFound("endTime.specified=false");
+    }
+
+    @Test
+    @Transactional
     public void getAllMutesByMutedUserIsEqualToSomething() throws Exception {
         // Initialize the database
         muteRepository.saveAndFlush(mute);
@@ -550,9 +552,9 @@ public class MuteResourceIT {
             .andExpect(content().contentType(MediaType.APPLICATION_JSON_UTF8_VALUE))
             .andExpect(jsonPath("$.[*].id").value(hasItem(mute.getId().intValue())))
             .andExpect(jsonPath("$.[*].reason").value(hasItem(DEFAULT_REASON)))
-            .andExpect(jsonPath("$.[*].endTime").value(hasItem(DEFAULT_END_TIME)))
             .andExpect(jsonPath("$.[*].guildId").value(hasItem(DEFAULT_GUILD_ID.intValue())))
-            .andExpect(jsonPath("$.[*].userId").value(hasItem(DEFAULT_USER_ID.intValue())));
+            .andExpect(jsonPath("$.[*].userId").value(hasItem(DEFAULT_USER_ID.intValue())))
+            .andExpect(jsonPath("$.[*].endTime").value(hasItem(DEFAULT_END_TIME.toString())));
 
         // Check, that the count call also returns 1
         restMuteMockMvc.perform(get("/api/mutes/count?sort=id,desc&" + filter))
@@ -601,9 +603,9 @@ public class MuteResourceIT {
         em.detach(updatedMute);
         updatedMute
             .reason(UPDATED_REASON)
-            .endTime(UPDATED_END_TIME)
             .guildId(UPDATED_GUILD_ID)
-            .userId(UPDATED_USER_ID);
+            .userId(UPDATED_USER_ID)
+            .endTime(UPDATED_END_TIME);
 
         restMuteMockMvc.perform(put("/api/mutes")
             .contentType(TestUtil.APPLICATION_JSON_UTF8)
@@ -615,9 +617,9 @@ public class MuteResourceIT {
         assertThat(muteList).hasSize(databaseSizeBeforeUpdate);
         Mute testMute = muteList.get(muteList.size() - 1);
         assertThat(testMute.getReason()).isEqualTo(UPDATED_REASON);
-        assertThat(testMute.getEndTime()).isEqualTo(UPDATED_END_TIME);
         assertThat(testMute.getGuildId()).isEqualTo(UPDATED_GUILD_ID);
         assertThat(testMute.getUserId()).isEqualTo(UPDATED_USER_ID);
+        assertThat(testMute.getEndTime()).isEqualTo(UPDATED_END_TIME);
     }
 
     @Test

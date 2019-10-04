@@ -2,7 +2,7 @@ package com.triippztech.guildo.utils;
 
 
 import com.triippztech.guildo.domain.DiscordUser;
-import com.triippztech.guildo.service.DiscordUserService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import net.dv8tion.jda.api.entities.User;
 import org.springframework.stereotype.Component;
 

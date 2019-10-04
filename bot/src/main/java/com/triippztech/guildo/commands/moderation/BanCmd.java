@@ -10,6 +10,10 @@ import com.triippztech.guildo.domain.enumeration.PunishmentType;
 import com.triippztech.guildo.domain.enumeration.ReturnStatus;
 import com.triippztech.guildo.listeners.CommandExceptionListener;
 import com.triippztech.guildo.service.*;
+import com.triippztech.guildo.service.moderation.ModerationLogItemService;
+import com.triippztech.guildo.service.moderation.TempBanService;
+import com.triippztech.guildo.service.server.GuildServerService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import com.triippztech.guildo.utils.ArgsUtil;
 import com.triippztech.guildo.utils.FormatUtil;
 import com.triippztech.guildo.utils.OtherUtil;
@@ -17,7 +21,6 @@ import com.triippztech.guildo.utils.Pair;
 import net.dv8tion.jda.api.Permission;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.sharding.ShardManager;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

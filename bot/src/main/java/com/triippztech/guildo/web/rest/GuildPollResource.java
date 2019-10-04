@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.GuildPoll;
-import com.triippztech.guildo.service.GuildPollService;
+import com.triippztech.guildo.service.guild.GuildPollService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.GuildPollCriteria;
-import com.triippztech.guildo.service.GuildPollQueryService;
+import com.triippztech.guildo.service.guild.GuildPollQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

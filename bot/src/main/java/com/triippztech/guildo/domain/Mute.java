@@ -6,6 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 
 import java.io.Serializable;
+import java.time.Instant;
 
 /**
  * Represents a temprary muting of a Discord user within a guild\n@author Mark Tripoli
@@ -26,15 +27,15 @@ public class Mute implements Serializable {
     @Column(name = "reason", nullable = false)
     private String reason;
 
-    @NotNull
-    @Column(name = "end_time", nullable = false)
-    private String endTime;
-
     @Column(name = "guild_id")
     private Long guildId;
 
     @Column(name = "user_id")
     private Long userId;
+
+    @NotNull
+    @Column(name = "end_time", nullable = false)
+    private Instant endTime;
 
     @ManyToOne
     @JsonIgnoreProperties("userMutes")
@@ -66,19 +67,6 @@ public class Mute implements Serializable {
         this.reason = reason;
     }
 
-    public String getEndTime() {
-        return endTime;
-    }
-
-    public Mute endTime(String endTime) {
-        this.endTime = endTime;
-        return this;
-    }
-
-    public void setEndTime(String endTime) {
-        this.endTime = endTime;
-    }
-
     public Long getGuildId() {
         return guildId;
     }
@@ -103,6 +91,19 @@ public class Mute implements Serializable {
 
     public void setUserId(Long userId) {
         this.userId = userId;
+    }
+
+    public Instant getEndTime() {
+        return endTime;
+    }
+
+    public Mute endTime(Instant endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+
+    public void setEndTime(Instant endTime) {
+        this.endTime = endTime;
     }
 
     public DiscordUser getMutedUser() {
@@ -153,9 +154,9 @@ public class Mute implements Serializable {
         return "Mute{" +
             "id=" + getId() +
             ", reason='" + getReason() + "'" +
-            ", endTime='" + getEndTime() + "'" +
             ", guildId=" + getGuildId() +
             ", userId=" + getUserId() +
+            ", endTime='" + getEndTime() + "'" +
             "}";
     }
 }

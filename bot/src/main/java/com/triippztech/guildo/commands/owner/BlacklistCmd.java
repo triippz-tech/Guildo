@@ -4,7 +4,7 @@ import com.jagrosh.jdautilities.command.CommandEvent;
 import com.triippztech.guildo.commands.owner.meta.AbstractOwnerCommand;
 import com.triippztech.guildo.config.ApplicationProperties;
 import com.triippztech.guildo.domain.DiscordUser;
-import com.triippztech.guildo.service.DiscordUserService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import com.triippztech.guildo.service.ServiceManager;
 import com.triippztech.guildo.utils.ArgsUtil;
 import net.dv8tion.jda.api.entities.Member;

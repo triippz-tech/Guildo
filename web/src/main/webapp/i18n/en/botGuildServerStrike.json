@@ -1,0 +1,29 @@
+{
+  "webApp": {
+    "botGuildServerStrike": {
+      "home": {
+        "title": "Guild Server Strikes",
+        "createLabel": "Create a new Guild Server Strike",
+        "createOrEditLabel": "Create or edit a Guild Server Strike",
+        "notFound": "No Guild Server Strikes found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete Guild Server Strike {{ id }}?"
+      },
+      "detail": {
+        "title": "Guild Server Strike"
+      },
+      "count": "Count",
+      "userId": "User Id",
+      "guildId": "Guild Id",
+      "discordUser": "Discord User"
+    }
+  },
+  "botApp": {
+    "botGuildServerStrike": {
+      "created": "A new Guild Server Strike is created with identifier {{ param }}",
+      "updated": "A Guild Server Strike is updated with identifier {{ param }}",
+      "deleted": "A Guild Server Strike is deleted with identifier {{ param }}"
+    }
+  }
+}

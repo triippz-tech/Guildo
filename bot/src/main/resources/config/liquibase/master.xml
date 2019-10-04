@@ -37,6 +37,7 @@
     <include file="config/liquibase/changelog/20191002004549_added_entity_ServerLogItem.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191002004550_added_entity_TempBan.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191002004551_added_entity_WelcomeMessage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191003185205_added_entity_GuildServerStrike.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
     <include file="config/liquibase/changelog/20191002004533_added_entity_constraints_AutoModeration.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191002004534_added_entity_constraints_DiscordUser.xml" relativeToChangelogFile="false"/>
@@ -51,5 +52,6 @@
     <include file="config/liquibase/changelog/20191002004548_added_entity_constraints_ScheduledAnnouncement.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191002004549_added_entity_constraints_ServerLogItem.xml" relativeToChangelogFile="false"/>
     <include file="config/liquibase/changelog/20191002004550_added_entity_constraints_TempBan.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20191003185205_added_entity_constraints_GuildServerStrike.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

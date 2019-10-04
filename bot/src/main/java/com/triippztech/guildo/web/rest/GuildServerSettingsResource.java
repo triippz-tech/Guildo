@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.GuildServerSettings;
-import com.triippztech.guildo.service.GuildServerSettingsService;
+import com.triippztech.guildo.service.server.GuildServerSettingsService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.GuildServerSettingsCriteria;
-import com.triippztech.guildo.service.GuildServerSettingsQueryService;
+import com.triippztech.guildo.service.server.GuildServerSettingsQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

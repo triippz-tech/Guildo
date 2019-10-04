@@ -55,19 +55,16 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/bot;DB_CLOSE_DELAY=-1
-    username: bot
+    url: jdbc:postgresql://localhost:5432/bot
+    username: postgres
     password:
     hikari:
       poolName: Hikari
       auto-commit: false
-  h2:
-    console:
-      enabled: false
   jpa:
-    database-platform: io.github.jhipster.domain.util.FixedH2Dialect
-    database: H2
-    show-sql: true
+    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL95Dialect
+    database: POSTGRESQL
+    show-sql: false
     properties:
       hibernate.id.new_generator_mappings: true
       hibernate.connection.provider_disables_autocommit: true
@@ -142,16 +139,16 @@ jhipster:
 
 application:
   discord:
-    token:
-    authorId:
+    token: NjI0MjY2MTYwMzA5MDEwNDYz.XY5j3A.KTgqU9vSfxluVLykcUuV2RexXbo
+    authorId: 110926644876689408
     prefix: /
     alternatePrefix: "<<"
     shards: 1
-    guildId:  #TriippzTech Server ID
-    categoryId:
+    guildId: 571391166596251660 #TriippzTech Server ID
+    categoryId: 547415713418182665
     schedulerPoolSize: 50
     logWebookUrl: ""
-    serverInvite:
+    serverInvite: https://discord.gg/vWWWTPr
     emojis:
       success: ":ok:"
       warning: ":warning:"

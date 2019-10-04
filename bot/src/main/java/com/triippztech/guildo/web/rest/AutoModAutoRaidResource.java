@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.AutoModAutoRaid;
-import com.triippztech.guildo.service.AutoModAutoRaidService;
+import com.triippztech.guildo.service.moderation.AutoModAutoRaidService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.AutoModAutoRaidCriteria;
-import com.triippztech.guildo.service.AutoModAutoRaidQueryService;
+import com.triippztech.guildo.service.moderation.AutoModAutoRaidQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

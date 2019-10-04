@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.AutoModMentions;
-import com.triippztech.guildo.service.AutoModMentionsService;
+import com.triippztech.guildo.service.moderation.AutoModMentionsService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.AutoModMentionsCriteria;
-import com.triippztech.guildo.service.AutoModMentionsQueryService;
+import com.triippztech.guildo.service.moderation.AutoModMentionsQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

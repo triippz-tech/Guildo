@@ -2,8 +2,6 @@ package com.triippztech.guildo.commands.general;
 
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.triippztech.guildo.commands.AbstractCommand;
-import com.triippztech.guildo.config.ApplicationProperties;
-import com.triippztech.guildo.service.DiscordUserService;
 import com.triippztech.guildo.service.ServiceManager;
 import com.triippztech.guildo.utils.BotConstants;
 import org.springframework.stereotype.Component;

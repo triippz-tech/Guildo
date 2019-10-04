@@ -1,6 +1,12 @@
 package com.triippztech.guildo.service;
 
 import com.triippztech.guildo.config.ApplicationProperties;
+import com.triippztech.guildo.service.guild.*;
+import com.triippztech.guildo.service.moderation.*;
+import com.triippztech.guildo.service.server.GuildServerProfileService;
+import com.triippztech.guildo.service.server.GuildServerService;
+import com.triippztech.guildo.service.user.DiscordUserProfileService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -32,6 +38,7 @@ public class ServiceManager {
     private final ScheduledAnnouncementService scheduledAnnouncementService;
     private final TempBanService tempBanService;
     private final WelcomeMessageService welcomeMessageService;
+    private final GuildServerStrikeService strikeService;
 
     public ServiceManager(ApplicationProperties applicationProperties,
                           AutoModAntiDupQueryService autoModAntiDupQueryService,
@@ -55,7 +62,8 @@ public class ServiceManager {
                           PunishmentService punishmentService,
                           ScheduledAnnouncementService scheduledAnnouncementService,
                           TempBanService tempBanService,
-                          WelcomeMessageService welcomeMessageService) {
+                          WelcomeMessageService welcomeMessageService,
+                          GuildServerStrikeService strikeService) {
         this.applicationProperties = applicationProperties;
         this.autoModAntiDupQueryService = autoModAntiDupQueryService;
         this.autoModAutoRaidService = autoModAutoRaidService;
@@ -79,6 +87,7 @@ public class ServiceManager {
         this.scheduledAnnouncementService = scheduledAnnouncementService;
         this.tempBanService = tempBanService;
         this.welcomeMessageService = welcomeMessageService;
+        this.strikeService = strikeService;
     }
 
     public ApplicationProperties getApplicationProperties() {
@@ -171,5 +180,9 @@ public class ServiceManager {
 
     public WelcomeMessageService getWelcomeMessageService() {
         return welcomeMessageService;
+    }
+
+    public GuildServerStrikeService getStrikeService() {
+        return strikeService;
     }
 }

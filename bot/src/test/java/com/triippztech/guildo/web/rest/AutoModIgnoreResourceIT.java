@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.AutoModIgnore;
 import com.triippztech.guildo.repository.AutoModIgnoreRepository;
-import com.triippztech.guildo.service.AutoModIgnoreService;
+import com.triippztech.guildo.service.moderation.AutoModIgnoreService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.AutoModIgnoreCriteria;
-import com.triippztech.guildo.service.AutoModIgnoreQueryService;
+import com.triippztech.guildo.service.moderation.AutoModIgnoreQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

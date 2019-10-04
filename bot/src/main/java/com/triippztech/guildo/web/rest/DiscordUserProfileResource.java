@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.DiscordUserProfile;
-import com.triippztech.guildo.service.DiscordUserProfileService;
+import com.triippztech.guildo.service.user.DiscordUserProfileService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.DiscordUserProfileCriteria;
-import com.triippztech.guildo.service.DiscordUserProfileQueryService;
+import com.triippztech.guildo.service.user.DiscordUserProfileQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

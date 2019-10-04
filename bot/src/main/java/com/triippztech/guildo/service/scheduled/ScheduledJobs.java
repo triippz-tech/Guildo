@@ -1,10 +1,13 @@
 package com.triippztech.guildo.service.scheduled;
 
 import com.triippztech.guildo.domain.DiscordUser;
-import com.triippztech.guildo.domain.ModerationLogItem;
 import com.triippztech.guildo.domain.TempBan;
 import com.triippztech.guildo.domain.enumeration.PunishmentType;
 import com.triippztech.guildo.service.*;
+import com.triippztech.guildo.service.moderation.ModerationLogItemService;
+import com.triippztech.guildo.service.moderation.TempBanService;
+import com.triippztech.guildo.service.server.GuildServerService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.Member;
 import net.dv8tion.jda.api.sharding.ShardManager;
@@ -32,6 +35,7 @@ public class ScheduledJobs {
 
     public void initialJobs(ShardManager shardManager) {
         this.checkForNewUsers(shardManager);
+        this.checkForExpiredBans(shardManager);
     }
 
     public void checkForNewUsers(ShardManager shardManager) {

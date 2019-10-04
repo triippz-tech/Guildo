@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.GuildPoll;
 import com.triippztech.guildo.domain.GuildPollItem;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.GuildPollRepository;
-import com.triippztech.guildo.service.GuildPollService;
+import com.triippztech.guildo.service.guild.GuildPollService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildPollCriteria;
-import com.triippztech.guildo.service.GuildPollQueryService;
+import com.triippztech.guildo.service.guild.GuildPollQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

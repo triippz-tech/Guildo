@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.GuildEvent;
-import com.triippztech.guildo.service.GuildEventService;
+import com.triippztech.guildo.service.guild.GuildEventService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.GuildEventCriteria;
-import com.triippztech.guildo.service.GuildEventQueryService;
+import com.triippztech.guildo.service.guild.GuildEventQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

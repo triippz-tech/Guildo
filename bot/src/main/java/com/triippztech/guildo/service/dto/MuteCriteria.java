@@ -10,6 +10,7 @@ import io.github.jhipster.service.filter.FloatFilter;
 import io.github.jhipster.service.filter.IntegerFilter;
 import io.github.jhipster.service.filter.LongFilter;
 import io.github.jhipster.service.filter.StringFilter;
+import io.github.jhipster.service.filter.InstantFilter;
 
 /**
  * Criteria class for the {@link com.triippztech.guildo.domain.Mute} entity. This class is used
@@ -28,11 +29,11 @@ public class MuteCriteria implements Serializable, Criteria {
 
     private StringFilter reason;
 
-    private StringFilter endTime;
-
     private LongFilter guildId;
 
     private LongFilter userId;
+
+    private InstantFilter endTime;
 
     private LongFilter mutedUserId;
 
@@ -44,9 +45,9 @@ public class MuteCriteria implements Serializable, Criteria {
     public MuteCriteria(MuteCriteria other){
         this.id = other.id == null ? null : other.id.copy();
         this.reason = other.reason == null ? null : other.reason.copy();
-        this.endTime = other.endTime == null ? null : other.endTime.copy();
         this.guildId = other.guildId == null ? null : other.guildId.copy();
         this.userId = other.userId == null ? null : other.userId.copy();
+        this.endTime = other.endTime == null ? null : other.endTime.copy();
         this.mutedUserId = other.mutedUserId == null ? null : other.mutedUserId.copy();
         this.mutedGuildServerId = other.mutedGuildServerId == null ? null : other.mutedGuildServerId.copy();
     }
@@ -72,14 +73,6 @@ public class MuteCriteria implements Serializable, Criteria {
         this.reason = reason;
     }
 
-    public StringFilter getEndTime() {
-        return endTime;
-    }
-
-    public void setEndTime(StringFilter endTime) {
-        this.endTime = endTime;
-    }
-
     public LongFilter getGuildId() {
         return guildId;
     }
@@ -94,6 +87,14 @@ public class MuteCriteria implements Serializable, Criteria {
 
     public void setUserId(LongFilter userId) {
         this.userId = userId;
+    }
+
+    public InstantFilter getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(InstantFilter endTime) {
+        this.endTime = endTime;
     }
 
     public LongFilter getMutedUserId() {
@@ -125,9 +126,9 @@ public class MuteCriteria implements Serializable, Criteria {
         return
             Objects.equals(id, that.id) &&
             Objects.equals(reason, that.reason) &&
-            Objects.equals(endTime, that.endTime) &&
             Objects.equals(guildId, that.guildId) &&
             Objects.equals(userId, that.userId) &&
+            Objects.equals(endTime, that.endTime) &&
             Objects.equals(mutedUserId, that.mutedUserId) &&
             Objects.equals(mutedGuildServerId, that.mutedGuildServerId);
     }
@@ -137,9 +138,9 @@ public class MuteCriteria implements Serializable, Criteria {
         return Objects.hash(
         id,
         reason,
-        endTime,
         guildId,
         userId,
+        endTime,
         mutedUserId,
         mutedGuildServerId
         );
@@ -150,9 +151,9 @@ public class MuteCriteria implements Serializable, Criteria {
         return "MuteCriteria{" +
                 (id != null ? "id=" + id + ", " : "") +
                 (reason != null ? "reason=" + reason + ", " : "") +
-                (endTime != null ? "endTime=" + endTime + ", " : "") +
                 (guildId != null ? "guildId=" + guildId + ", " : "") +
                 (userId != null ? "userId=" + userId + ", " : "") +
+                (endTime != null ? "endTime=" + endTime + ", " : "") +
                 (mutedUserId != null ? "mutedUserId=" + mutedUserId + ", " : "") +
                 (mutedGuildServerId != null ? "mutedGuildServerId=" + mutedGuildServerId + ", " : "") +
             "}";

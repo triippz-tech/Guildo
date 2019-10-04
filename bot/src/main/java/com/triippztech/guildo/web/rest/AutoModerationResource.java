@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.AutoModeration;
-import com.triippztech.guildo.service.AutoModerationService;
+import com.triippztech.guildo.service.moderation.AutoModerationService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.AutoModerationCriteria;
-import com.triippztech.guildo.service.AutoModerationQueryService;
+import com.triippztech.guildo.service.moderation.AutoModerationQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

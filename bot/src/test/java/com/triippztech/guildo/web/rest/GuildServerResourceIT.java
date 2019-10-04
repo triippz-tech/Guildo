@@ -17,10 +17,9 @@ import com.triippztech.guildo.domain.TempBan;
 import com.triippztech.guildo.domain.Mute;
 import com.triippztech.guildo.domain.GuildApplication;
 import com.triippztech.guildo.repository.GuildServerRepository;
-import com.triippztech.guildo.service.GuildServerService;
+import com.triippztech.guildo.service.server.GuildServerService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildServerCriteria;
-import com.triippztech.guildo.service.GuildServerQueryService;
+import com.triippztech.guildo.service.server.GuildServerQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

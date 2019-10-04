@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.GuildServerSettings;
 import com.triippztech.guildo.domain.AutoModeration;
 import com.triippztech.guildo.domain.Punishment;
 import com.triippztech.guildo.repository.GuildServerSettingsRepository;
-import com.triippztech.guildo.service.GuildServerSettingsService;
+import com.triippztech.guildo.service.server.GuildServerSettingsService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildServerSettingsCriteria;
-import com.triippztech.guildo.service.GuildServerSettingsQueryService;
+import com.triippztech.guildo.service.server.GuildServerSettingsQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

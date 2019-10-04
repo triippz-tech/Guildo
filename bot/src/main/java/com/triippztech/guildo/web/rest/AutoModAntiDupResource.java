@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.AutoModAntiDup;
-import com.triippztech.guildo.service.AutoModAntiDupService;
+import com.triippztech.guildo.service.moderation.AutoModAntiDupService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.AutoModAntiDupCriteria;
-import com.triippztech.guildo.service.AutoModAntiDupQueryService;
+import com.triippztech.guildo.service.moderation.AutoModAntiDupQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

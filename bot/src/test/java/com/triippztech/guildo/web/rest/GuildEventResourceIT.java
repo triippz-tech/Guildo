@@ -5,10 +5,9 @@ import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.GuildEvent;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.GuildEventRepository;
-import com.triippztech.guildo.service.GuildEventService;
+import com.triippztech.guildo.service.guild.GuildEventService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildEventCriteria;
-import com.triippztech.guildo.service.GuildEventQueryService;
+import com.triippztech.guildo.service.guild.GuildEventQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -22,7 +21,6 @@ import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.Base64Utils;
 import org.springframework.validation.Validator;
 
 import javax.persistence.EntityManager;

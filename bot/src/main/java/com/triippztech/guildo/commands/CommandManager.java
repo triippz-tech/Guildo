@@ -5,6 +5,7 @@ import com.triippztech.guildo.commands.general.*;
 import com.triippztech.guildo.commands.moderation.BanCmd;
 import com.triippztech.guildo.commands.moderation.ModLogCmd;
 import com.triippztech.guildo.commands.moderation.UnBanCmd;
+import com.triippztech.guildo.commands.moderation.UserCheckCmd;
 import com.triippztech.guildo.commands.owner.BlacklistCmd;
 import com.triippztech.guildo.commands.owner.BotStatusCmd;
 import org.springframework.stereotype.Component;
@@ -21,11 +22,12 @@ public class CommandManager {
     private final BanCmd banCmd;
     private final UnBanCmd unBanCmd;
     private final ModLogCmd modLogCmd;
+    private final UserCheckCmd checkCmd;
 
     public CommandManager(PingCmd pingCmd, LookupCmd lookupCmd, InviteCmd inviteCmd,
                           ServerInfoCmd serverInfoCmd, AboutCmd aboutCmd,
                           BlacklistCmd blacklistCmd, BotStatusCmd botStatusCmd,
-                          BanCmd banCmd, UnBanCmd unBanCmd, ModLogCmd modLogCmd) {
+                          BanCmd banCmd, UnBanCmd unBanCmd, ModLogCmd modLogCmd, UserCheckCmd checkCmd) {
         this.pingCmd = pingCmd;
         this.lookupCmd = lookupCmd;
         this.inviteCmd = inviteCmd;
@@ -36,6 +38,7 @@ public class CommandManager {
         this.banCmd = banCmd;
         this.unBanCmd = unBanCmd;
         this.modLogCmd = modLogCmd;
+        this.checkCmd = checkCmd;
     }
 
     public Command[] getCommands() {
@@ -49,7 +52,8 @@ public class CommandManager {
             this.botStatusCmd,
             this.banCmd,
             this.unBanCmd,
-            this.modLogCmd
+            this.modLogCmd,
+            this.checkCmd
         };
     }
 }

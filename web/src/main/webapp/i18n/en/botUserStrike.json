@@ -1,0 +1,29 @@
+{
+  "webApp": {
+    "botUserStrike": {
+      "home": {
+        "title": "User Strikes",
+        "createLabel": "Create a new User Strike",
+        "createOrEditLabel": "Create or edit a User Strike",
+        "notFound": "No User Strikes found"
+      },
+      "delete": {
+        "question": "Are you sure you want to delete User Strike {{ id }}?"
+      },
+      "detail": {
+        "title": "User Strike"
+      },
+      "count": "Count",
+      "userId": "User Id",
+      "guildId": "Guild Id",
+      "discordUser": "Discord User"
+    }
+  },
+  "botApp": {
+    "botUserStrike": {
+      "created": "A new User Strike is created with identifier {{ param }}",
+      "updated": "A User Strike is updated with identifier {{ param }}",
+      "deleted": "A User Strike is deleted with identifier {{ param }}"
+    }
+  }
+}

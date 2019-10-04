@@ -8,10 +8,9 @@ import com.triippztech.guildo.domain.AutoModMentions;
 import com.triippztech.guildo.domain.AutoModAntiDup;
 import com.triippztech.guildo.domain.AutoModAutoRaid;
 import com.triippztech.guildo.repository.AutoModerationRepository;
-import com.triippztech.guildo.service.AutoModerationService;
+import com.triippztech.guildo.service.moderation.AutoModerationService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.AutoModerationCriteria;
-import com.triippztech.guildo.service.AutoModerationQueryService;
+import com.triippztech.guildo.service.moderation.AutoModerationQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

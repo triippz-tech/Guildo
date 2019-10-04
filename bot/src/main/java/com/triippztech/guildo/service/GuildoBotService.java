@@ -1,6 +1,5 @@
 package com.triippztech.guildo.service;
 
-import club.minnced.discord.webhook.WebhookClient;
 import club.minnced.discord.webhook.WebhookClientBuilder;
 import com.jagrosh.jdautilities.command.CommandClient;
 import com.jagrosh.jdautilities.command.CommandClientBuilder;
@@ -11,7 +10,7 @@ import com.triippztech.guildo.domain.enumeration.BotStatus;
 import com.triippztech.guildo.listeners.CommandExceptionListener;
 import com.triippztech.guildo.listeners.EventListener;
 import com.triippztech.guildo.service.scheduled.ScheduledJobs;
-import net.dv8tion.jda.api.JDA;
+
 import net.dv8tion.jda.api.OnlineStatus;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.sharding.DefaultShardManagerBuilder;
@@ -24,7 +23,6 @@ import org.springframework.stereotype.Service;
 import javax.security.auth.login.LoginException;
 import java.util.EnumSet;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 @Service
@@ -32,29 +30,23 @@ public class GuildoBotService {
     private final Logger log = LoggerFactory.getLogger(GuildoBotService.class);
     private final ServiceManager serviceManager;
     private final CommandManager commandManager;
-    private ScheduledJobs scheduledJobs;
-    private CommandExceptionListener commandExceptionListener;
-    private EventListener eventListener;
-    private EventWaiter waiter;
-    private ScheduledExecutorService threadpool;
-    private WebhookClient logwebhook;
-    private ShardManager shardManager;
-    private BotStatus botStatus = BotStatus.STOPPED;
-    private CommandClient client;
+    private final BotSystems botSystems;
 
-    public GuildoBotService(ServiceManager serviceManager, CommandManager commandManager) throws LoginException {
+
+    public GuildoBotService(ServiceManager serviceManager, CommandManager commandManager, BotSystems botSystems) throws LoginException {
         this.serviceManager = serviceManager;
         this.commandManager = commandManager;
+        this.botSystems = botSystems;
 
         this.startBot();
     }
 
     private void startBot() throws LoginException {
-        this.botStatus = BotStatus.STARTING;
-        this.waiter = new EventWaiter(Executors.newSingleThreadScheduledExecutor(), false);
-        this.threadpool = Executors.newScheduledThreadPool(50);
+        this.botSystems.setBotStatus(BotStatus.STARTING);
+        this.botSystems.setWaiter(new EventWaiter(Executors.newSingleThreadScheduledExecutor(), false));
+        this.botSystems.setThreadpool(Executors.newScheduledThreadPool(50));
         if ( !this.serviceManager.getApplicationProperties().getDiscord().getLogWebookUrl().isEmpty() )
-            this.logwebhook = new WebhookClientBuilder(this.serviceManager.getApplicationProperties().getDiscord().getLogWebookUrl()).build();
+            this.botSystems.setLogwebhook(new WebhookClientBuilder(this.serviceManager.getApplicationProperties().getDiscord().getLogWebookUrl()).build());
 
         this.initializeScheduleEvents();
         this.initializeListeners();
@@ -70,26 +62,26 @@ public class GuildoBotService {
     }
 
     private BotStatus restartBot() throws LoginException {
-        this.botStatus = BotStatus.RESTARTING;
+        this.botSystems.setBotStatus(BotStatus.RESTARTING);
         this.stopBot();
         this.startBot();
-        return this.botStatus;
+        return this.botSystems.getBotStatus();
     }
 
     private void initializeScheduleEvents() {
         log.info("Preparing scheduled events");
-        this.scheduledJobs = new ScheduledJobs(this);
+        this.botSystems.setScheduledJobs(new ScheduledJobs(this));
     }
 
     private void initializeListeners() {
         log.info("Initializing Event and Exception listeners for bot.");
-        this.eventListener = new EventListener(this);
-        this.commandExceptionListener = new CommandExceptionListener();
+        this.botSystems.setEventListener(new EventListener(this));
+        this.botSystems.setCommandExceptionListener( new CommandExceptionListener() );
     }
 
     private void buildCommandClient() {
         log.info("Creating Command Client for Guildo Bot");
-        this.client =  new CommandClientBuilder()
+        CommandClient commandClient =  new CommandClientBuilder()
             .setPrefix( this.serviceManager.getApplicationProperties().getDiscord().getPrefix() )
             .setOwnerId( this.serviceManager.getApplicationProperties().getDiscord().getAuthorId() )
             .setServerInvite( this.serviceManager.getApplicationProperties().getDiscord().getServerInvite() )
@@ -97,73 +89,45 @@ public class GuildoBotService {
                 this.serviceManager.getApplicationProperties().getDiscord().getEmojis().getWarning(),
                 this.serviceManager.getApplicationProperties().getDiscord().getEmojis().getError())
             .setLinkedCacheSize(0)
-            .setListener(this.commandExceptionListener)
-            .setScheduleExecutor(threadpool)
+            .setListener(this.botSystems.getCommandExceptionListener())
+            .setScheduleExecutor(this.botSystems.getThreadpool())
             // Help consumer?
             .setDiscordBotsKey(this.serviceManager.getApplicationProperties().getDiscord().getToken())
             .addCommands(this.commandManager.getCommands())
             .build();
+
+        this.botSystems.setClient(commandClient);
     }
 
     private void buildShardManager() throws LoginException {
         log.info("Building Shards for Guildo Bot");
-        this.shardManager = new DefaultShardManagerBuilder()
+        ShardManager shardManager = new DefaultShardManagerBuilder()
             .setShardsTotal(Integer.parseInt(this.serviceManager.getApplicationProperties().getDiscord().getShards()))
             .setToken(this.serviceManager.getApplicationProperties().getDiscord().getToken())
-            .addEventListeners(this.eventListener, this.client, waiter)
+            .addEventListeners(this.botSystems.getEventListener(), this.botSystems.getClient(), this.botSystems.getWaiter())
             .setStatus(OnlineStatus.DO_NOT_DISTURB)
             .setActivity(Activity.playing("loading..."))
             .setBulkDeleteSplittingEnabled(false)
             .setRequestTimeoutRetry(true)
             .setDisabledCacheFlags(EnumSet.of(CacheFlag.EMOTE, CacheFlag.ACTIVITY)) //TODO: dont disable GAME
             .build();
+
+        this.botSystems.setShardManager(shardManager);
     }
 
     private void buildThreadPools() {
-        this.threadpool.scheduleWithFixedDelay(System::gc, 12, 6, TimeUnit.HOURS);
-    }
-
-    public BotStatus getBotStatus() {
-        return botStatus;
-    }
-
-    public EventWaiter getWaiter() {
-        return waiter;
-    }
-
-    public ScheduledExecutorService getThreadpool() {
-        return threadpool;
-    }
-
-    public WebhookClient getLogwebhook() {
-        return logwebhook;
-    }
-
-    public ShardManager getShardManager() {
-        return shardManager;
-    }
-
-    public JDA getJDA(Long guildId) {
-        return shardManager.getGuildById(guildId).getJDA();
+        this.botSystems.getThreadpool().scheduleWithFixedDelay(System::gc, 12, 6, TimeUnit.HOURS);
     }
 
     public ApplicationProperties getApplicationProperties() {
         return serviceManager.getApplicationProperties();
     }
 
-    public ScheduledJobs getScheduledJobs() {
-        return scheduledJobs;
-    }
-
-    public EventListener getEventListener() {
-        return eventListener;
-    }
-
-    public CommandClient getClient() {
-        return client;
-    }
-
     public ServiceManager getServiceManager() {
         return serviceManager;
+    }
+
+    public BotSystems getBotSystems() {
+        return botSystems;
     }
 }

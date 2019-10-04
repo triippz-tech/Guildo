@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.WelcomeMessage;
-import com.triippztech.guildo.service.WelcomeMessageService;
+import com.triippztech.guildo.service.moderation.WelcomeMessageService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.WelcomeMessageCriteria;
-import com.triippztech.guildo.service.WelcomeMessageQueryService;
+import com.triippztech.guildo.service.moderation.WelcomeMessageQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

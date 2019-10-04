@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.Mute;
-import com.triippztech.guildo.service.MuteService;
+import com.triippztech.guildo.service.moderation.MuteService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.MuteCriteria;
-import com.triippztech.guildo.service.MuteQueryService;
+import com.triippztech.guildo.service.moderation.MuteQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

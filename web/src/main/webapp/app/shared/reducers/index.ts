@@ -107,6 +107,14 @@ import page, {
 import rootPage, {
   RootPageState
 } from 'app/entities/blog/root-page/root-page.reducer';
+// prettier-ignore
+import userStrike, {
+  UserStrikeState
+} from 'app/entities/bot/user-strike/user-strike.reducer';
+// prettier-ignore
+import guildServerStrike, {
+  GuildServerStrikeState
+} from 'app/entities/bot/guild-server-strike/guild-server-strike.reducer';
 /* jhipster-needle-add-reducer-import - JHipster will add reducer here */
 
 export interface IRootState {
@@ -140,6 +148,8 @@ export interface IRootState {
   readonly welcomeMessage: WelcomeMessageState;
   readonly page: PageState;
   readonly rootPage: RootPageState;
+  readonly userStrike: UserStrikeState;
+  readonly guildServerStrike: GuildServerStrikeState;
   /* jhipster-needle-add-reducer-type - JHipster will add reducer type here */
   readonly loadingBar: any;
 }
@@ -175,6 +185,8 @@ const rootReducer = combineReducers<IRootState>({
   welcomeMessage,
   page,
   rootPage,
+  userStrike,
+  guildServerStrike,
   /* jhipster-needle-add-reducer-combine - JHipster will add reducer here */
   loadingBar
 });

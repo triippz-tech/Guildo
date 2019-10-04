@@ -39,7 +39,10 @@
     "entitySuffix": "",
     "dtoSuffix": "DTO",
     "otherModules": [],
-    "blueprints": []
+    "blueprints": [],
+    "promptValues": {
+      "microservicePath": "/Users/marktripoli/guildo/bot"
+    }
   },
   "entities": [
     "AutoModAntiDup",

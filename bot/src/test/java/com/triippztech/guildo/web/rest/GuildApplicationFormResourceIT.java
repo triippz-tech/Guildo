@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.GuildApplicationForm;
 import com.triippztech.guildo.repository.GuildApplicationFormRepository;
-import com.triippztech.guildo.service.GuildApplicationFormService;
+import com.triippztech.guildo.service.guild.GuildApplicationFormService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildApplicationFormCriteria;
-import com.triippztech.guildo.service.GuildApplicationFormQueryService;
+import com.triippztech.guildo.service.guild.GuildApplicationFormQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

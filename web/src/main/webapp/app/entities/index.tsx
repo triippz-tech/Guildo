@@ -29,6 +29,8 @@ import TempBan from './bot/temp-ban';
 import WelcomeMessage from './bot/welcome-message';
 import Page from './blog/page';
 import RootPage from './blog/root-page';
+import UserStrike from './bot/user-strike';
+import GuildServerStrike from './bot/guild-server-strike';
 /* jhipster-needle-add-route-import - JHipster will add routes here */
 
 const Routes = ({ match }) => (
@@ -60,6 +62,8 @@ const Routes = ({ match }) => (
       <ErrorBoundaryRoute path={`${match.url}/welcome-message`} component={WelcomeMessage} />
       <ErrorBoundaryRoute path={`${match.url}/page`} component={Page} />
       <ErrorBoundaryRoute path={`${match.url}/root-page`} component={RootPage} />
+      <ErrorBoundaryRoute path={`${match.url}/user-strike`} component={UserStrike} />
+      <ErrorBoundaryRoute path={`${match.url}/guild-server-strike`} component={GuildServerStrike} />
       {/* jhipster-needle-add-route-path - JHipster will add routes here */}
     </Switch>
   </div>

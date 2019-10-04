@@ -1,5 +1,6 @@
 package com.triippztech.guildo.listeners;
 
+import com.triippztech.guildo.service.BotSystems;
 import com.triippztech.guildo.service.GuildoBotService;
 import net.dv8tion.jda.api.events.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -17,9 +18,11 @@ public class EventListener extends ListenerAdapter {
 
     @Override
     public void onReady(@Nonnull ReadyEvent event) {
-        this.guildoBotService.getScheduledJobs().checkForNewUsers(guildoBotService.getShardManager());
-        this.guildoBotService.getThreadpool().scheduleWithFixedDelay( () ->
-            this.guildoBotService.getScheduledJobs().checkForExpiredBans(guildoBotService.getShardManager())
+        this.guildoBotService.getBotSystems().getScheduledJobs().checkForNewUsers(
+            guildoBotService.getBotSystems().getShardManager());
+        this.guildoBotService.getBotSystems().getThreadpool().scheduleWithFixedDelay( () ->
+            this.guildoBotService.getBotSystems().getScheduledJobs().checkForExpiredBans(
+                guildoBotService.getBotSystems().getShardManager())
             , 0
             , 1
             , TimeUnit.MINUTES);

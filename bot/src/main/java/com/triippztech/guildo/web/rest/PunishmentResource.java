@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.Punishment;
-import com.triippztech.guildo.service.PunishmentService;
+import com.triippztech.guildo.service.moderation.PunishmentService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.PunishmentCriteria;
-import com.triippztech.guildo.service.PunishmentQueryService;
+import com.triippztech.guildo.service.moderation.PunishmentQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

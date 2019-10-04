@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.TempBan;
 import com.triippztech.guildo.domain.DiscordUser;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.TempBanRepository;
-import com.triippztech.guildo.service.TempBanService;
+import com.triippztech.guildo.service.moderation.TempBanService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.TempBanCriteria;
-import com.triippztech.guildo.service.TempBanQueryService;
+import com.triippztech.guildo.service.moderation.TempBanQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

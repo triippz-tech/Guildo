@@ -2,59 +2,135 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cf2c8efa-67b5-439f-8526-1b70f29b3d07" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/AbstractCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/AboutCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/InviteCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/LookupCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/PingCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/ServerInfoCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/ModLogCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/meta/AbstractModerationCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BlacklistCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BotStatusCmd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/meta/AbstractOwnerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/BotStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/ModLogFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/ReturnStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/exception/command/EmptyListException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/exception/command/NoBanFoundExcetion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/exception/command/UserNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/CommandExceptionListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/ArgsUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/OtherUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/Pair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/.jhipster/Page.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/.jhipster/Page.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/.jhipster/RootPage.json" beforeDir="false" afterPath="$PROJECT_DIR$/blog/.jhipster/RootPage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/domain/Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/domain/Page.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/web/rest/PageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/web/rest/PageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/web/rest/RootPageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/java/com/triippztech/guildo/web/rest/RootPageResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/main/resources/config/liquibase/fake-data/page.csv" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/main/resources/config/liquibase/fake-data/page.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/test/java/com/triippztech/guildo/web/rest/PageResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/test/java/com/triippztech/guildo/web/rest/PageResourceIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/src/test/java/com/triippztech/guildo/web/rest/RootPageResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/blog/src/test/java/com/triippztech/guildo/web/rest/RootPageResourceIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/docker/postgresql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/docker/postgresql.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/config/ApplicationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/config/ApplicationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/DiscordUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/DiscordUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/ModerationLogItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/ModerationLogItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/DiscordUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/DiscordUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/TempBanRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/TempBanRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/Action.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/BotSystems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/.jhipster/Mute.json" beforeDir="false" afterPath="$PROJECT_DIR$/bot/.jhipster/Mute.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/AbstractCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/AbstractCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/InviteCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/InviteCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/ServerInfoCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/ServerInfoCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/ModLogCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/ModLogCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/meta/AbstractModerationCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/meta/AbstractModerationCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BlacklistCmd.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BlacklistCmd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/meta/AbstractOwnerCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/meta/AbstractOwnerCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/Mute.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/Mute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/MuteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/MuteRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModAntiDupQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModAntiDupQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModAntiDupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModAntiDupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModAutoRaidQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModAutoRaidQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModAutoRaidService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModAutoRaidService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModIgnoreQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModIgnoreQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModIgnoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModIgnoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModMentionsQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModMentionsQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModMentionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModMentionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModerationQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModerationQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/AutoModerationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModerationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserProfileQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserProfileQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GiveAwayQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GiveAwayQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GiveAwayService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GiveAwayService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildApplicationFormQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildApplicationFormQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildApplicationFormService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildApplicationFormService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildApplicationQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildApplicationQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildApplicationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildApplicationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildEventQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildEventQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildEventService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildEventService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildPollItemQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildPollItemQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildPollItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildPollItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildPollQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildPollQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildPollService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildPollService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerProfileQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerProfileQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerSettingsQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerSettingsQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerSettingsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/server/GuildServerSettingsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/ModerationLogItemQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/ModerationLogItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/MuteQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/MuteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/PunishmentQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/PunishmentQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/PunishmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/PunishmentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ScheduledAnnouncementQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/ScheduledAnnouncementQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ScheduledAnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/ScheduledAnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServerLogItemQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/ServerLogItemQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServerLogItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/ServerLogItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/TempBanQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/TempBanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/WelcomeMessageQueryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/WelcomeMessageQueryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/WelcomeMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/WelcomeMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/dto/MuteCriteria.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/dto/MuteCriteria.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModAntiDupResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModAntiDupResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModAutoRaidResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModAutoRaidResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModIgnoreResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModIgnoreResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModMentionsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModMentionsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModerationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/AutoModerationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/DiscordUserProfileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/DiscordUserProfileResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/DiscordUserResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/DiscordUserResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GiveAwayResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GiveAwayResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildApplicationFormResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildApplicationFormResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildApplicationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildApplicationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildEventResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildEventResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildPollItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildPollItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildPollResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildPollResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerProfileResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerProfileResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerSettingsResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/GuildServerSettingsResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ModerationLogItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ModerationLogItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/MuteResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/MuteResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/PunishmentResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/PunishmentResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ScheduledAnnouncementResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ScheduledAnnouncementResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ServerLogItemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/ServerLogItemResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/TempBanResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/TempBanResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/WelcomeMessageResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/web/rest/WelcomeMessageResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/changelog/20191002004546_added_entity_Mute.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/changelog/20191002004546_added_entity_Mute.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/fake-data/mute.csv" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/fake-data/mute.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/master.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/master.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModAntiDupResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModAntiDupResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModAutoRaidResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModAutoRaidResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModIgnoreResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModIgnoreResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModMentionsResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModMentionsResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModerationResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/AutoModerationResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/DiscordUserProfileResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/DiscordUserProfileResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/DiscordUserResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/DiscordUserResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GiveAwayResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GiveAwayResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildApplicationFormResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildApplicationFormResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildApplicationResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildApplicationResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildEventResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildEventResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildPollItemResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildPollItemResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildPollResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildPollResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerProfileResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerProfileResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerSettingsResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/GuildServerSettingsResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ModerationLogItemResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ModerationLogItemResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/MuteResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/MuteResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/PunishmentResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/PunishmentResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ScheduledAnnouncementResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ScheduledAnnouncementResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ServerLogItemResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/ServerLogItemResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/TempBanResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/TempBanResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/WelcomeMessageResourceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/test/java/com/triippztech/guildo/web/rest/WelcomeMessageResourceIT.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/h2db/db/bot.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/h2db/db/bot.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/h2db/db/bot.trace.db" beforeDir="false" afterPath="$PROJECT_DIR$/target/h2db/db/bot.trace.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/.yo-rc.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/.yo-rc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/app/entities/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/app/entities/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/app/shared/layout/menus/entities.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/app/shared/layout/menus/entities.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/app/shared/reducers/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/app/shared/reducers/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/src/main/webapp/i18n/en/global.json" beforeDir="false" afterPath="$PROJECT_DIR$/web/src/main/webapp/i18n/en/global.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/blog/node_modules/" />
     <ignored path="$PROJECT_DIR$/bot/node_modules/" />
@@ -67,82 +143,73 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bot: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bot: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bot: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="bot@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="bot: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="317" column="69" lean-forward="true" selection-start-line="317" selection-start-column="69" selection-end-line="317" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BlacklistCmd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-392">
-              <caret line="28" column="79" selection-start-line="28" selection-start-column="79" selection-end-line="28" selection-end-column="79" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java">
+        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+            <state relative-caret-position="341">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/TempBanRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="22" column="72" selection-start-line="22" selection-start-column="72" selection-end-line="22" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="84" column="33" lean-forward="true" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/OtherUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="824">
-              <caret line="71" selection-start-line="71" selection-end-line="71" />
             </state>
           </provider>
         </entry>
@@ -160,24 +227,30 @@
     <findStrings>
       <find>Modera</find>
       <find>createItem</find>
+      <find>getSchedule</find>
+      <find>Strike</find>
+      <find>secondsToTime</find>
+      <find>faker</find>
+      <find>user_strike</find>
+      <find>userStrikeRepository</find>
+      <find>lock</find>
+      <find>database</find>
     </findStrings>
+    <replaceStrings>
+      <replace>guildServerStrikeRepository</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bot" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bot/pom.xml" />
-        <option value="$PROJECT_DIR$/bot/src/main/docker/postgresql.yml" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/config/ApplicationProperties.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/command/UserNotFoundException.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/exception/command/NoBanFoundExcetion.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerRepository.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/DiscordUserRepository.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/CommandManager.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/CommandExceptionListenerService.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/AbstractCommand.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/AboutCmd.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/InviteCmd.java" />
@@ -188,25 +261,42 @@
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/meta/AbstractOwnerCommand.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BlacklistCmd.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BotStatusCmd.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandMaster.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/ModLogCmd.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/ModerationLogItem.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerService.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemService.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/DiscordUser.java" />
-        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/ArgsUtil.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/OtherUtil.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/TempBanRepository.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java" />
         <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/discord/BotSystems.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/Action.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/UserStrikeService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/TempBanService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/MuteRepository.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/MuteQueryService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/MuteService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/UserStrike.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/UserStrikeRepository.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/UserStrikeService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/resources/config/liquibase/master.xml" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerStrikeRepository.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildServerStrikeService.java" />
+        <option value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java" />
       </list>
     </option>
   </component>
@@ -239,8 +329,8 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="834" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -295,65 +385,28 @@
             <path>
               <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
               <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
               <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="general" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
               <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="commands" type="462c0819:PsiDirectoryNode" />
-              <item name="owner" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
               <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="listeners" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="guildo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="bot" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="guildo" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="scheduled" type="462c0819:PsiDirectoryNode" />
+              <item name="docker" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -363,6 +416,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -370,20 +424,28 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="editor.config.ad.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="spring.boot" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.triippztech.guildo.service" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.triippztech.guildo.domain.enumeration" />
       <recent name="com.triippztech.guildo.commands" />
       <recent name="com.triippztech.guildo.service.scheduled" />
-      <recent name="com.triippztech.guildo.domain.enumeration" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration" />
@@ -436,81 +498,117 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569977221707</updated>
-      <workItem from="1569977223328" duration="21393000" />
+      <workItem from="1569977223328" duration="31139000" />
+      <workItem from="1570118453491" duration="5993000" />
+      <workItem from="1570130134700" duration="2044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21393000" />
+    <option name="totallyTimeSpent" value="39176000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17582418" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18070818" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" weight="0.32918918" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32857144" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Console" weight="0.32959184" />
+      <window_info anchor="bottom" id="TypeScript" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32972974" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2945946" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.33265308" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32959184" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.33163264" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" weight="0.32901555" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.327551" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24969475" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32901555" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.15934066" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/blog" />
+      <path value="$PROJECT_DIR$/bot" />
+      <path value="$PROJECT_DIR$/web" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java</url>
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserService.java</url>
           <line>170</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java</url>
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserService.java</url>
           <line>180</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java</url>
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/TempBanService.java</url>
           <line>99</line>
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java</url>
-          <line>140</line>
+          <line>143</line>
           <properties />
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java</url>
+          <line>84</line>
+          <properties />
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java</url>
+          <line>79</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="27" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildServerStrikeService.java</url>
+          <line>147</line>
+          <properties />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -520,317 +618,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/exception/command/EmptyListException.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/DiscordUserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/BotStatus.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/CommandExceptionListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotUtils.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/Pair.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/BotConstants.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/PunishmentType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/ModLogFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/ReturnStatus.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildEventService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/AbstractCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/LookupCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/ServerInfoCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/meta/AbstractModerationCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/meta/AbstractOwnerCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="44" lean-forward="true" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/owner/BotStatusCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="71" selection-start-line="3" selection-start-column="71" selection-end-line="3" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/AboutCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1150">
-          <caret line="479" column="5" selection-start-line="479" selection-start-column="5" selection-end-line="479" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="74" column="42" selection-start-line="74" selection-start-column="42" selection-end-line="74" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandMaster.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/ModerationLogItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="285" column="33" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="38" column="5" lean-forward="true" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="424">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildServerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="108" column="2" lean-forward="true" selection-start-line="108" selection-start-column="2" selection-end-line="108" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/InviteCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/ModLogCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="13" lean-forward="true" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ModerationLogItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="106" column="38" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="38" />
-          <folding>
-            <element signature="e#2748#2779#0" expanded="true" />
-            <element signature="e#3828#3859#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/TempBan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/general/PingCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="48" lean-forward="true" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/DiscordUserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="168" selection-start-line="168" selection-start-column="2" selection-end-line="189" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/DiscordUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="61" column="64" selection-start-line="61" selection-start-column="64" selection-end-line="61" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/ArgsUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1245">
-          <caret line="83" column="61" selection-start-line="83" selection-start-column="61" selection-end-line="83" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4666#4667#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="217" selection-start-line="217" selection-end-line="217" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="748" selection-start-line="748" selection-end-line="748" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/aspectj/MethodInvocationProceedingJoinPoint.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/aspectj/AbstractAspectJAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="632" selection-start-line="632" selection-end-line="632" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/aspectj/AspectJAroundAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="69" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/aop/logging/LoggingAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="846">
-          <caret line="90" selection-start-line="90" selection-end-line="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/framework/ReflectiveMethodInvocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -842,23 +629,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="824">
           <caret line="71" selection-start-line="71" selection-end-line="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="84" column="33" lean-forward="true" selection-start-line="84" selection-start-column="33" selection-end-line="84" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/TempBanService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
         </state>
       </provider>
     </entry>
@@ -881,8 +651,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/BanCmd.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="317" column="69" lean-forward="true" selection-start-line="317" selection-start-column="69" selection-end-line="317" selection-end-column="69" />
+        <state relative-caret-position="448">
+          <caret line="317" column="69" selection-start-line="317" selection-start-column="69" selection-end-line="317" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -891,8 +661,335 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/scheduled/ScheduledJobs.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="67" column="28" selection-start-line="67" selection-start-column="28" selection-end-line="67" selection-end-column="28" />
+        <state relative-caret-position="311">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UnBanCmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/AutoModAntiDupQueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/enumeration/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/Punishment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/listeners/EventListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/GuildPoll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/DiscordUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="27" lean-forward="true" selection-start-line="126" selection-start-column="27" selection-end-line="126" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/TempBanService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1135">
+          <caret line="138" lean-forward="true" selection-start-line="138" selection-end-line="138" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/Mute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="89" column="5" selection-start-line="89" selection-start-column="5" selection-end-line="89" selection-end-column="5" />
+          <folding>
+            <element signature="e#1364#1365#0" expanded="true" />
+            <element signature="e#1389#1390#0" expanded="true" />
+            <element signature="e#1423#1424#0" expanded="true" />
+            <element signature="e#1451#1452#0" expanded="true" />
+            <element signature="e#1484#1485#0" expanded="true" />
+            <element signature="e#1513#1514#0" expanded="true" />
+            <element signature="e#1655#1656#0" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1897#1898#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#1995#1996#0" expanded="true" />
+            <element signature="e#2133#2134#0" expanded="true" />
+            <element signature="e#2169#2170#0" expanded="true" />
+            <element signature="e#2204#2205#0" expanded="true" />
+            <element signature="e#2234#2235#0" expanded="true" />
+            <element signature="e#2384#2385#0" expanded="true" />
+            <element signature="e#2422#2423#0" expanded="true" />
+            <element signature="e#2463#2464#0" expanded="true" />
+            <element signature="e#2495#2496#0" expanded="true" />
+            <element signature="e#2671#2672#0" expanded="true" />
+            <element signature="e#2715#2716#0" expanded="true" />
+            <element signature="e#2763#2764#0" expanded="true" />
+            <element signature="e#2802#2803#0" expanded="true" />
+            <element signature="e#2999#3000#0" expanded="true" />
+            <element signature="e#3050#3051#0" expanded="true" />
+            <element signature="e#3449#3450#0" expanded="true" />
+            <element signature="e#3474#3475#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/MuteRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="69" selection-start-line="14" selection-start-column="69" selection-end-line="14" selection-end-column="69" />
+          <folding>
+            <element signature="e#272#299#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/utils/FormatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1771">
+          <caret line="150" column="5" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/MuteService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/moderation/MuteQueryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/aop/logging/LoggingAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/liquibase/fake-data/user_strike.csv">
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/docker/monitoring.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jagrosh/jda-utilities-command/3.0.2/jda-utilities-command-3.0.2-sources.jar!/com/jagrosh/jdautilities/command/impl/CommandClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="444" selection-start-line="444" selection-end-line="444" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/jagrosh/jda-utilities-command/3.0.2/jda-utilities-command-3.0.2-sources.jar!/com/jagrosh/jdautilities/command/Command.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="329" selection-start-line="329" selection-end-line="329" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/.jhipster/WelcomeMessage.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/liquibase/changelog/20191003150144_added_entity_UserStrike.xml" />
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/user/UserStrikeService.java" />
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/GuildoBotService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1639">
+          <caret line="129" column="39" selection-start-line="129" selection-start-column="39" selection-end-line="129" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5766#5767#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/CommandManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/liquibase/changelog/20191003150144_added_entity_constraints_UserStrike.xml" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/5.1.9.RELEASE/spring-aop-5.1.9.RELEASE-sources.jar!/org/springframework/aop/framework/JdkDynamicAopProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="211" column="36" selection-start-line="211" selection-start-column="36" selection-end-line="211" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/BotSystems.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1114#1115#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/UserStrikeRepository.java" />
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/domain/UserStrike.java" />
+    <entry file="file://$PROJECT_DIR$/bot/.jhipster/UserStrike.json" />
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/UserStrikeService.java" />
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/package-info.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/ServiceManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="184" column="56" selection-start-line="184" selection-start-column="56" selection-end-line="184" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#7585#7586#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/liquibase/master.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/liquibase/changelog/20191003185205_added_entity_GuildServerStrike.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-453" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/.h2.server.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="51" selection-start-line="51" selection-end-line="68" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://db8e3ba7-1bd6-4c03-b27e-737573a643ae/database/bot/schema/public/table/guild_server_strike">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="53d89bd6-a8ac-42a4-8eee-0bbba136522f">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/db8e3ba7-1bd6-4c03-b27e-737573a643ae/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/resources/config/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.1.9.RELEASE/spring-core-5.1.9.RELEASE-sources.jar!/org/springframework/cglib/proxy/MethodProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="217" selection-start-line="217" selection-end-line="217" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/repository/GuildServerStrikeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/service/guild/GuildServerStrikeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bot/src/main/java/com/triippztech/guildo/commands/moderation/UserCheckCmd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

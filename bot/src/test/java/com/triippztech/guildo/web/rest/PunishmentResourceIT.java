@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.Punishment;
 import com.triippztech.guildo.repository.PunishmentRepository;
-import com.triippztech.guildo.service.PunishmentService;
+import com.triippztech.guildo.service.moderation.PunishmentService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.PunishmentCriteria;
-import com.triippztech.guildo.service.PunishmentQueryService;
+import com.triippztech.guildo.service.moderation.PunishmentQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

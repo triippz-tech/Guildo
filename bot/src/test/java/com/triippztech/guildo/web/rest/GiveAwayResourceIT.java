@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.GiveAway;
 import com.triippztech.guildo.domain.DiscordUser;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.GiveAwayRepository;
-import com.triippztech.guildo.service.GiveAwayService;
+import com.triippztech.guildo.service.guild.GiveAwayService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GiveAwayCriteria;
-import com.triippztech.guildo.service.GiveAwayQueryService;
+import com.triippztech.guildo.service.guild.GiveAwayQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -23,7 +22,6 @@ import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.Base64Utils;
 import org.springframework.validation.Validator;
 
 import javax.persistence.EntityManager;

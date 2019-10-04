@@ -6,10 +6,9 @@ import com.triippztech.guildo.domain.GuildApplication;
 import com.triippztech.guildo.domain.DiscordUser;
 import com.triippztech.guildo.domain.GuildServer;
 import com.triippztech.guildo.repository.GuildApplicationRepository;
-import com.triippztech.guildo.service.GuildApplicationService;
+import com.triippztech.guildo.service.guild.GuildApplicationService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildApplicationCriteria;
-import com.triippztech.guildo.service.GuildApplicationQueryService;
+import com.triippztech.guildo.service.guild.GuildApplicationQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

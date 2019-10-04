@@ -8,10 +8,9 @@ import com.triippztech.guildo.domain.TempBan;
 import com.triippztech.guildo.domain.Mute;
 import com.triippztech.guildo.domain.GuildApplication;
 import com.triippztech.guildo.repository.DiscordUserRepository;
-import com.triippztech.guildo.service.DiscordUserService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.DiscordUserCriteria;
-import com.triippztech.guildo.service.DiscordUserQueryService;
+import com.triippztech.guildo.service.user.DiscordUserQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

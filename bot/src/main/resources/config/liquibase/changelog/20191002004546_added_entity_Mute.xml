@@ -18,14 +18,14 @@
             <column name="reason" type="varchar(255)">
                 <constraints nullable="false" />
             </column>
-            <column name="end_time" type="varchar(255)">
-                <constraints nullable="false" />
-            </column>
             <column name="guild_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <column name="user_id" type="bigint">
                 <constraints nullable="true" />
+            </column>
+            <column name="end_time" type="datetime">
+                <constraints nullable="false" />
             </column>
             <column name="muted_user_id" type="bigint">
                 <constraints nullable="true" />
@@ -35,6 +35,7 @@
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
         </createTable>
+        <dropDefaultValue tableName="mute" columnName="end_time" columnDataType="datetime"/>
     </changeSet>
 
     <changeSet id="20191002004546-1-relations" author="jhipster">
@@ -57,9 +58,9 @@
                   tableName="mute">
             <column name="id" type="numeric"/>
             <column name="reason" type="string"/>
-            <column name="end_time" type="string"/>
             <column name="guild_id" type="numeric"/>
             <column name="user_id" type="numeric"/>
+            <column name="end_time" type="datetime"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here, do not remove-->
         </loadData>
     </changeSet>

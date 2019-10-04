@@ -32,6 +32,8 @@
         "botWelcomeMessage": "Welcome Message",
         "blogPage": "Page",
         "blogRootPage": "Root Page",
+        "botUserStrike": "User Strike",
+        "botGuildServerStrike": "Guild Server Strike",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

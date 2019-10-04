@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.GuildServerProfile;
 import com.triippztech.guildo.repository.GuildServerProfileRepository;
-import com.triippztech.guildo.service.GuildServerProfileService;
+import com.triippztech.guildo.service.server.GuildServerProfileService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.GuildServerProfileCriteria;
-import com.triippztech.guildo.service.GuildServerProfileQueryService;
+import com.triippztech.guildo.service.server.GuildServerProfileQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

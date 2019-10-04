@@ -2,8 +2,6 @@ package com.triippztech.guildo.commands.moderation.meta;
 
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.triippztech.guildo.commands.AbstractCommand;
-import com.triippztech.guildo.config.ApplicationProperties;
-import com.triippztech.guildo.service.DiscordUserService;
 import com.triippztech.guildo.service.ServiceManager;
 import net.dv8tion.jda.api.Permission;
 

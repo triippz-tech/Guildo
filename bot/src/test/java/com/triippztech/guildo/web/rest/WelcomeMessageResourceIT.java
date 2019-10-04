@@ -4,10 +4,9 @@ import com.triippztech.guildo.BotApp;
 import com.triippztech.guildo.config.TestSecurityConfiguration;
 import com.triippztech.guildo.domain.WelcomeMessage;
 import com.triippztech.guildo.repository.WelcomeMessageRepository;
-import com.triippztech.guildo.service.WelcomeMessageService;
+import com.triippztech.guildo.service.moderation.WelcomeMessageService;
 import com.triippztech.guildo.web.rest.errors.ExceptionTranslator;
-import com.triippztech.guildo.service.dto.WelcomeMessageCriteria;
-import com.triippztech.guildo.service.WelcomeMessageQueryService;
+import com.triippztech.guildo.service.moderation.WelcomeMessageQueryService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

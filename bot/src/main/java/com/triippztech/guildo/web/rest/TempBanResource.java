@@ -1,10 +1,10 @@
 package com.triippztech.guildo.web.rest;
 
 import com.triippztech.guildo.domain.TempBan;
-import com.triippztech.guildo.service.TempBanService;
+import com.triippztech.guildo.service.moderation.TempBanService;
 import com.triippztech.guildo.web.rest.errors.BadRequestAlertException;
 import com.triippztech.guildo.service.dto.TempBanCriteria;
-import com.triippztech.guildo.service.TempBanQueryService;
+import com.triippztech.guildo.service.moderation.TempBanQueryService;
 
 import io.github.jhipster.web.util.HeaderUtil;
 import io.github.jhipster.web.util.ResponseUtil;

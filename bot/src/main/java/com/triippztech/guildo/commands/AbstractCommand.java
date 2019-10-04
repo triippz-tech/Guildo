@@ -3,7 +3,7 @@ package com.triippztech.guildo.commands;
 import com.jagrosh.jdautilities.command.Command;
 import com.jagrosh.jdautilities.command.CommandEvent;
 import com.triippztech.guildo.config.ApplicationProperties;
-import com.triippztech.guildo.service.DiscordUserService;
+import com.triippztech.guildo.service.user.DiscordUserService;
 import com.triippztech.guildo.service.ServiceManager;
 
 /**
